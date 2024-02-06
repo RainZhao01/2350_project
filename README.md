@@ -13,7 +13,7 @@
 # 3. Setup upstream:
 # git push --set-upstream origin
 
-# 4. try to pull someone most recent branch repo that contain our updated name.
+# 4. try to pull someone most recent branch repo that contain our updated name.(first person should pull form Rain's branch, do not pull form master yet. When you click on 'branches' on the GitHub website, it will display which branch is the most recent updates.")
 
 # 5. modify the readMe file
 

@@ -2,28 +2,30 @@
 
 # Please add your name on the list
 
-# setup steps:
 
+# setup steps:
 # clone the project from "git@github.com:RainZhao01/2350_project.git"
 
-# cd into project directory
+# 1. cd into project directory
 
-# create your banch
+# 2. create your banch
 
-# Setup upstream:
-# git push --set-upstream origin <your branch>
+# 3. Setup upstream:
+# git push --set-upstream origin
 
-# modify the readMe file
+# 4. try to pull someone most recent branch repo that contain our updated name.(first person should pull form Rain's branch, do not pull form master yet. When you click on 'branches' on the GitHub website, it will display which branch is the most recent updates.")
 
-# git add . , git commit and git push
+# 5. modify the readMe file
+
+# 6. git add . , git commit and git push
 
 
 # additional information:
 
-#   when pull the repository: 
-#   git pull origin <branch>
+# when pull the repository:
+# git pull origin
 
-#   when push the repository: 
-#   git push origin <branch>
+# when push the repository:
+# git push origin
 
 Rain

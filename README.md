@@ -8,7 +8,7 @@
 
 # 1. cd into project directory
 
-# 2. create your banch
+# 2. create your branch
 
 # 3. Setup upstream:
 # git push --set-upstream origin

@@ -23,9 +23,9 @@
 # additional information:
 
 # when pull the repository:
-# git pull origin/<your branch name>
+# git pull origin <your branch name>
 
 # when push the repository:
-# git push origin/<your branch name>
+# git push origin <your branch name>
 
 Rain

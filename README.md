@@ -1,7 +1,7 @@
 # 2350_project
 
 # Please add your name on the list
-
+john
 
 # setup steps:
 # clone the project from "git@github.com:RainZhao01/2350_project.git"
@@ -21,13 +21,15 @@
 
 
 # additional information:
-
 # when pull the repository:
 # git pull origin <your branch name>
-
 # when push the repository:
+
 # git push origin <your branch name>
 
 Rain
 
-(updated)
+(Updated)
+
+# git push origin <your branch name>
+

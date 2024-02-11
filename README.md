@@ -4,6 +4,7 @@
 
 =======
 john
+Ryan
 
 # setup steps:
 # clone the project from "git@github.com:RainZhao01/2350_project.git"

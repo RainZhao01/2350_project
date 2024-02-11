@@ -2,9 +2,10 @@
 
 # Please add your name on the list
 
-=======
 john
 Ryan
+Nam 
+Rain
 
 # setup steps:
 # clone the project from "git@github.com:RainZhao01/2350_project.git"
@@ -29,7 +30,6 @@ Ryan
 # when push the repository:
 # git push origin <your branch name>
 
-Nam 
-Rain(Updated)
+
 
 

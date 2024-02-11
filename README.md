@@ -1,7 +1,10 @@
 # 2350_project
 
 # Please add your name on the list
+
+=======
 john
+Ryan
 
 # setup steps:
 # clone the project from "git@github.com:RainZhao01/2350_project.git"

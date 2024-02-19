@@ -41,7 +41,7 @@
 - *Age*: 42
 - *Education*: Bachelor's degree in Business Administration
 - *Occupation*: Marketing Manager at a local firm
-- *Background*: Juggles 
+- *Background*: 
   - Lives in Mount Pleasent and takes a a short commute to work
   - Works an average of 50 hours per week
   - Juggles work commitments, social interactions, and personal errands
@@ -64,3 +64,61 @@
 - *Quotes and Motivations*:
   - Quote: "I spent too much this month on takeout, but I just don't have time to cook"
   - Motivation: "I want to eat better, save money, and feel in control of my financees and health"
+
+**Exercise API**
+  > This is Sarah, a local hospital!
+
+- *Age*: 36
+- *Education*: Bachelor's of Science in Nursing
+- *Occupation*: Nurse at a nurse at VGH
+- *Background*: 
+  - Lives in Richmond with her husband and two young children
+  - Works long shifts at the hospital, in a high-stress environment
+  - Strives to find balance between her family responsibilities, career, and health goals 
+- *Characteristics*:
+  - Is determined and motivated to get the job done
+  - Compassionate and resilient, she does well in fast-paced and high-stress environments, but struggles to find the time for self-care
+  - Values efficiency and practicality in all aspects of her life
+- *Goals*:
+  - Striving to improve her physical fitness and endurace to help her in every day life
+  - Seeks guidance on balancing fitness goals with responsibilities as a nurse and a mother
+  - Aiming to implement exercising on a regular bases to help manage stress and boost energy levels 
+- *Challenges*:
+  - Limited time for structured workout routines due to long shifts and irregular work hours
+  - Difficulty keeping consistent with routines in the past due to time constraints
+  - Needs workouts that can be done within an hour and a few home workouts
+- *Behaviors*:
+  - Motivated to make positive changes in her life but needs help in formatting a workout plan
+  - Values convenience as she has many commitments
+  - Prioritizes self-care and health as she has a busy lifestyle
+- *Quotes and Motivations*:
+  - Quote: "I understand how important exercising is, but finding the right workout plan is difficult"
+  - Motivation: "I want to set a positive example for my children and prioritize my long term health"
+    > This is Sarah, a local hospital!
+
+- *Age*: 46
+- *Education*: Trade Certification in Electrical Installation
+- *Occupation* Electrician at a local company
+- *Background*: 
+  - Lives in the suburban area of Langley with his wife and their three teenage songs
+  - Works as a full-time electrician
+  - Juggles his physically demanding job and parenting three active teenage boys
+- *Characteristics*:
+  - Skilled, detail-oriented and excels in the technical part of electrical work
+  - Takes pride in his work and is known for problem-solving skills and ability to understand complex electrical issues
+  - Struggles to find time for dedicated exercise as 
+- *Goals*:
+  - Aims to improve physical fitess and maintain his overall health
+  - Used to weight lift back in the day, but now wants to train for a functionality to prevent injuries
+  - Striving to get rid of his "dad bod"
+- *Challenges*:
+  - He lacks motivation due to not knowning how to train, but will train if he knew
+  - Needs a flexiblity in the schedule as he tends to pick up over time hours and take his sons to games
+  - He does not enjoy aerobic exercises
+- *Behaviors*:
+  - Most of his day to day physical activity is at his workplace
+  - Is a supportive parent and husband, he spends a lot of time with family
+  - Values practicailty in all aspects of life
+- *Quotes and Motivations*:
+  - Quote: "I need to shrink this tummy of mine"
+  - Motivation: "Exercise will help me to sustain this line of work for many years to come"

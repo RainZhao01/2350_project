@@ -128,6 +128,41 @@ For our project, we decided to use the Kanban SDLC. We chose this due to the iss
 
 
 ## Rain Outline your technology stack and why you chose it
+We chose HTML and JavaScript, including Bootstrap, for our project's tech stack because they're versatile and easy to use for creating interactive web apps. JavaScript enables dynamic features and real-time updates without page reloads. Plus, JavaScript libraries save time and effort, helping us build a project that can adapt to users' changing needs and new technologies.
+
+## Rain Initiated GitHub project 
+
+(# 2350_project
+
+# Please add your name on the list
+
+john
+Ryan
+Nam 
+Rain
+
+# setup steps:
+# clone the project from "git@github.com:RainZhao01/2350_project.git"
+
+# 1. cd into project directory
+
+# 2. create your branch
+
+# 3. Setup upstream:
+# git push --set-upstream origin
+
+# 4. try to pull someone most recent branch repo that contain our updated name.(first person should pull from Rain's branch, do not pull from master yet. When you click on 'branches' on the GitHub website, it will display which branch is the most recent updates.")
+
+# 5. modify the readMe file
+
+# 6. git add . , git commit and git push
+
+
+# additional information:
+# when pull the repository:
+# git pull origin <your branch name>
+# when push the repository:
+# git push origin <your branch name>)
 
 
 ## John List of chosen APIs and why you chose them
@@ -193,4 +228,6 @@ Data Flow Diagram - Level 0:
 Data Flow Diagram - Level 1:
 
 ![DFD_level_1](images/DFD_2.png)
+
+
 

@@ -5,7 +5,7 @@ Our project is a software application that provides users a way to balance out t
 
 
 ## Ryan : Outline which SDLC model was chosen and why
-
+For our project, we decided to use the Kanban SDLC. We chose this due to the issue with times when we can meet up. Some of us have schedules that do not remain consistent, so setting up dates to meet up can be difficult. Since we are a small team and our project is not super complex, we can use Kanban as it allows us more flexibility to work around our schedules. We also felt that due to the constraints of our schedules, this SDLC would provide us with the best efficiency for our project. It will also provide us with a better understanding of our group’s project progress, so we do not overstress ourselves without busy schedules. As this is our first time working with each other, it will also help with communication in cases such as someone spending a long time on a task and not asking for help.
 
 ## John :  2 User stories per each API (4 total, 1 mark each)
 
@@ -136,12 +136,37 @@ The Exercise API was chosen for similar reasons as it goes hand in hand with the
 
 ## Ryan Planned features per each API (in detail - 3 features per each API, 6 features minimum)
 
+Tasty Api:
+
+Feature #1
+This feature is generating recipes for the user. There will be options such as dietary restrictions, cooking levels, and calories. The dietary restrictions input will help users pick food that they can eat without issue. The cooking level input will help the users pick recipes that they can cook. The cooking level may be inaccurate as we are basing the difficulty on length. The calories will aid users meet their dietary needs.
+
+Feature #2:
+Our second feature is like our first, however, instead of a single recipe we are providing an entire meal plan. This meal plan can be for a single day or multiple days. Although you could use the first feature multiple times to make a meal plan, our second feature will serve as a better visualization of what the user is consuming. This is because when a user picks out 3 different meals using the first feature, it will not be tailored to their nutritional goal.
+
+Feature #3:
+This feature is similar to the first feature but focuses on what the user currently owns. This feature will be linked to the user’s account. It will be a list of groceries that the user currently owns and will search the Tasty Api for food that they can currently make.
+
+Exercise Api:
+
+Feature #1:
+This feature will create a workout plan for the user. This feature will be based on the user's experience and workout goals. The user will also be able to choose which muscle groups and the type of workout they want to do.
+
+Feature #2:
+This feature will allow users to change their preexisting workouts. They will be able to choose a workout they currently have and swap it out for an alternative workout that focuses on the same part of the body.
+
+Feature #3:
+Our final feature will allow the user to search for an exercise from the Exercise API and will be provided with a video to the user to explain it.
+
 
 ## Ryan Work breakdown structure (WBS) including how the work was divided up and who has completed what element (including the actual report and presentation components)
 
+![Project WBS](images/Project%20WBS.png)
+The task are not divided up due to our choice of the Kanban SDLC.
 
 ## Ryan Project schedule/timeline
 
+![Project Timeline](images/Project%20Timeline%20estimate.png)
 
 ## Nam & John : Wireframes and prototype elements for the application interface
 

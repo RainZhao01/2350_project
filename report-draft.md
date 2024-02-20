@@ -144,16 +144,27 @@ Our project is a software application that provides users a way to balance out t
 
 ## Nam & John : InProgress Wireframes and prototype elements for the application interface
 
-Wireframe for Home, Recipes, and Exercise pages: 
-![Wireframe](images/wireframe.pdf)
+Wireframe for main pages: 
+
+Home page: 
+
+![Homepage_wireframe](images/Wireframe_Homepage.png)
+
+Recipes Page: 
+
+![Recipes_wireframe](images/Wireframe_Recipes.png)
+
+Exercise Page:
+![Exercise_wireframe](images/Wireframe_Workouts.png)
+
 
 ## Nam 2 Data flow diagrams (high level/overview - Level 0, another with details - Level 1) (3 marks each)
 
 Data Flow Diagram - Level 0:
 
-![DFD_level_0](images/DFD_1.pdf)
+![DFD_level_0](images/DFD_1.png)
 
 Data Flow Diagram - Level 1:
 
-![DFD_level_1](images/DFD_2.pdf)
+![DFD_level_1](images/DFD_2.png)
 

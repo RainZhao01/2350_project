@@ -1,13 +1,13 @@
-# Report Draft
+# Report 
 
-## Nam : Overview of the project
+## Overview of the project
 Our project is a software application that provides users a way to balance out their dietary and physical lifestyle. By combining two key API's: the Tasty API and Exercises API users will have access to a variety of health and lifestyle choices for everyone to benefit from. The Tasty API allos users to display recipes, generate meal plans, create grocery lists, and educational nutrition facts. Saving the time and energy that would have been otherwise wasted on planning and research. Complementing that is the Exercise API which will generate workout plans, provide alternatives to pre-existing workout plans and deliver informative demonstration videos. Given that our diets and physical health are closely intertwined, leveraging both APIs together is a great opportunity to streamline and create convenience for the average user. Pairing the Tasty and Exercises API’s together supplies users with detailed diets to meet their workout needs and vice versa. Creating a balance and convenience for users' physical health, dietery needs and overall lifestyle.
 
 
-## Ryan : Outline which SDLC model was chosen and why
+## Outline which SDLC model was chosen and why
 For our project, we decided to use the Kanban SDLC. We chose this due to the issue with times when we can meet up. Some of us have schedules that do not remain consistent, so setting up dates to meet up can be difficult. Since we are a small team and our project is not super complex, we can use Kanban as it allows us more flexibility to work around our schedules. We also felt that due to the constraints of our schedules, this SDLC would provide us with the best efficiency for our project. It will also provide us with a better understanding of our group’s project progress, so we do not overstress ourselves without busy schedules. As this is our first time working with each other, it will also help with communication in cases such as someone spending a long time on a task and not asking for help.
 
-## John :  2 User stories per each API (4 total, 1 mark each)
+## 2 User stories per each API (4 total, 1 mark each)
 
 **Tasty API**
 
@@ -127,19 +127,14 @@ For our project, we decided to use the Kanban SDLC. We chose this due to the iss
   - Motivation: "Exercise will help me to sustain this line of work for many years to come"
 
 
-## Rain Outline your technology stack and why you chose it
+## Outline your technology stack and why you chose it
 We chose HTML and JavaScript, including Bootstrap, for our project's tech stack because they're versatile and easy to use for creating interactive web apps. JavaScript enables dynamic features and real-time updates without page reloads. Plus, JavaScript libraries save time and effort, helping us build a project that can adapt to users' changing needs and new technologies.
 
-## Rain Initiated GitHub project 
+## Initiated GitHub project 
 
-(# 2350_project
+# 2350_project
 
-# Please add your name on the list
 
-john
-Ryan
-Nam 
-Rain
 
 # setup steps:
 # clone the project from "git@github.com:RainZhao01/2350_project.git"
@@ -162,14 +157,14 @@ Rain
 # when pull the repository:
 # git pull origin <your branch name>
 # when push the repository:
-# git push origin <your branch name>)
+# git push origin <your branch name>
 
 
-## John List of chosen APIs and why you chose them
+## List of chosen APIs and why you chose them
 We chose the Tasty API because it meets our requirements of the features that our application offers. The Tasty API allows us to generate recipes and nutritional facts. Based off of those, we will be able to manipulate that data into a readable format for the user. Tasty also has a large database of recipes, ensuring we meet the needs of the wide population while taking account of different dietary restrictions. The nutritional values from the generated recipes is what our feature two needs; Which is to calculate the calories and macros to achieve a balanced diet and weight goals. As for the third, the app will compare the recipe's ingredients to the user's.
 The Exercise API was chosen for similar reasons as it goes hand in hand with the Tasty API, and has a large database. Lining up the goals for the user will generate a dedicated workout plan tailored to different users and their goals, so that a middle aged woman and a young man have different workouts. 
 
-## Ryan Planned features per each API (in detail - 3 features per each API, 6 features minimum)
+## Planned features per each API (in detail - 3 features per each API, 6 features minimum)
 
 Tasty Api:
 
@@ -194,16 +189,16 @@ Feature #3:
 Our final feature will allow the user to search for an exercise from the Exercise API and will be provided with a video to the user to explain it.
 
 
-## Ryan Work breakdown structure (WBS) including how the work was divided up and who has completed what element (including the actual report and presentation components)
+## Work breakdown structure (WBS) including how the work was divided up and who has completed what element (including the actual report and presentation components)
 
 ![Project WBS](images/Project%20WBS.png)
 The task are not divided up due to our choice of the Kanban SDLC.
 
-## Ryan Project schedule/timeline
+## Project schedule/timeline
 
 ![Project Timeline](images/Project%20Timeline%20estimate.png)
 
-## Nam & John : Wireframes and prototype elements for the application interface
+## Wireframes and prototype elements for the application interface
 
 Wireframe for main pages: 
 
@@ -219,7 +214,7 @@ Exercise Page:
 ![Exercise_wireframe](images/Wireframe_Workouts.png)
 
 
-## Nam 2 Data flow diagrams (high level/overview - Level 0, another with details - Level 1) (3 marks each)
+## 2 Data flow diagrams (high level/overview - Level 0, another with details - Level 1) (3 marks each)
 
 Data Flow Diagram - Level 0:
 

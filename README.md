@@ -1,3 +1,9 @@
+# Contributors
+Nam Le<br />
+Rain Zhao<br />
+Ryan Yan<br />
+John Baltazar<br />
+
 # Overview of the project
 
 Our project is a software application that provides users a way to balance out their dietary and physical lifestyle. By combining two key API's: the Tasty API and Exercises API users will have access to a variety of health and lifestyle choices for everyone to benefit from. The Tasty API allos users to display recipes, generate meal plans, create grocery lists, and educational nutrition facts. Saving the time and energy that would have been otherwise wasted on planning and research. Complementing that is the Exercise API which will generate workout plans, provide alternatives to pre-existing workout plans and deliver informative demonstration videos. Given that our diets and physical health are closely intertwined, leveraging both APIs together is a great opportunity to streamline and create convenience for the average user. Pairing the Tasty and Exercises API’s together supplies users with detailed diets to meet their workout needs and vice versa. Creating a balance and convenience for users' physical health, dietery needs and overall lifestyle.
@@ -6,23 +12,13 @@ Our project is a software application that provides users a way to balance out t
 
 We chose HTML and JavaScript, including Bootstrap, for our project's tech stack because they're versatile and easy to use for creating interactive web apps. JavaScript enables dynamic features and real-time updates without page reloads. Plus, JavaScript libraries save time and effort, helping us build a project that can adapt to users' changing needs and new technologies.
 
-# Contributors
-Nam Le<br />
-Rain Zhao<br />
-Ryan Yan<br />
-John Baltazar<br />
 
 
 # Initiated GitHub project 
 
 2350_project
 
-# Please add your name on the list
 
-john<br />
-Ryan<br />
-Nam<br />
-Rain<br />
 
 # setup steps:
 # clone the project from "git@github.com:RainZhao01/2350_project.git"

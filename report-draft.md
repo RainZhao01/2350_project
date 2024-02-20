@@ -1,6 +1,7 @@
 # Report Draft
 
 ## Overview
+Our project is a software application that provides users a way to balance out their dietary and physical lifestyle. By Intertwining two key API's: the Tasty API and Exercises API users will have access to a variety of health and lifestyle choices for everyone to benefit from. The Tasty API users will display recipes, generate meal plans, create grocery lists, and educational nutrition facts. Saving the time and energy that would have been otherwise wasted on planning and research. On the contrary the Exercise API will generate and edit workout plans and provide explanatory videos. Being how our diets and physical health are a direct consequence of each other leveraging the two API’s would be a great opportunity of use. Pairing the Tasty and Exercises API’s together supplies users with detailed diets to meet their workout needs and vice versa. Creating a balance for users diets, physical health, and overall lifestyle. 
 
 ### SDLC Model
 

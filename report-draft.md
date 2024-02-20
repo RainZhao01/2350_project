@@ -8,8 +8,6 @@ Our project is a software application that provides users a way to balance out t
 
 
 ## John :  2 User stories per each API (4 total, 1 mark each)
-We chose the Tasty API because it meets our requirements of the features that our application offers. The Tasty API allows us to generate recipes and nutritional facts. Based off of those, we will be able to manipulate that data into a readable format for the user. Tasty also has a large database of recipes, ensuring we meet the needs of the wide population while taking account of different dietary restrictions. The nutritional values from the generated recipes is what our feature two needs; Which is to calculate the calories and macros to achieve a balanced diet and weight goals. As for the third, the app will compare the recipe's ingredients to the user's.
-The Exercise API was chosen for similar reasons as it goes hand in hand with the Tasty API, and has a large database. Lining up the goals for the user will generate a dedicated workout plan tailored to different users and their goals, so that a middle aged woman and a young man have different workouts. 
 
 **Tasty API**
 
@@ -132,10 +130,11 @@ The Exercise API was chosen for similar reasons as it goes hand in hand with the
 ## Rain Outline your technology stack and why you chose it
 
 
-## John InProgress List of chosen APIs and why you chose them
+## John List of chosen APIs and why you chose them
+We chose the Tasty API because it meets our requirements of the features that our application offers. The Tasty API allows us to generate recipes and nutritional facts. Based off of those, we will be able to manipulate that data into a readable format for the user. Tasty also has a large database of recipes, ensuring we meet the needs of the wide population while taking account of different dietary restrictions. The nutritional values from the generated recipes is what our feature two needs; Which is to calculate the calories and macros to achieve a balanced diet and weight goals. As for the third, the app will compare the recipe's ingredients to the user's.
+The Exercise API was chosen for similar reasons as it goes hand in hand with the Tasty API, and has a large database. Lining up the goals for the user will generate a dedicated workout plan tailored to different users and their goals, so that a middle aged woman and a young man have different workouts. 
 
-
-## Ryan InProgress Planned features per each API (in detail - 3 features per each API, 6 features minimum)
+## Ryan Planned features per each API (in detail - 3 features per each API, 6 features minimum)
 
 
 ## Ryan Work breakdown structure (WBS) including how the work was divided up and who has completed what element (including the actual report and presentation components)
@@ -144,7 +143,7 @@ The Exercise API was chosen for similar reasons as it goes hand in hand with the
 ## Ryan Project schedule/timeline
 
 
-## Nam & John : InProgress Wireframes and prototype elements for the application interface
+## Nam & John : Wireframes and prototype elements for the application interface
 
 Wireframe for main pages: 
 

@@ -1,11 +1,13 @@
 # Report Draft
 
-## Overview
-Our project is a software application that provides users a way to balance out their dietary and physical lifestyle. By combining two key API's: the Tasty API and Exercises API users will have access to a variety of health and lifestyle choices for everyone to benefit from. The Tasty API allos users to display recipes, generate meal plans, create grocery lists, and educational nutrition facts. Saving the time and energy that would have been otherwise wasted on planning and research. Complementing that is the Exercise API that will generate workout plans, provide alternatives to pre-existing workout plans and deliver informative demonstration videos. Given that our diets and physical health are closely intertwined, leveraging both APIs together is a great opportunity to streamline and create convenience for the average user. Pairing the Tasty and Exercises API’s together supplies users with detailed diets to meet their workout needs and vice versa. Creating a balance and convenience for users' physical health, dietery needs and overall lifestyle.
+## Nam : Overview of the project
+Our project is a software application that provides users a way to balance out their dietary and physical lifestyle. By combining two key API's: the Tasty API and Exercises API users will have access to a variety of health and lifestyle choices for everyone to benefit from. The Tasty API allos users to display recipes, generate meal plans, create grocery lists, and educational nutrition facts. Saving the time and energy that would have been otherwise wasted on planning and research. Complementing that is the Exercise API which will generate workout plans, provide alternatives to pre-existing workout plans and deliver informative demonstration videos. Given that our diets and physical health are closely intertwined, leveraging both APIs together is a great opportunity to streamline and create convenience for the average user. Pairing the Tasty and Exercises API’s together supplies users with detailed diets to meet their workout needs and vice versa. Creating a balance and convenience for users' physical health, dietery needs and overall lifestyle.
 
-### SDLC Model
 
-### User Stories
+## Ryan : Outline which SDLC model was chosen and why
+
+
+## John :  2 User stories per each API (4 total, 1 mark each)
 
 **Tasty API**
 
@@ -123,3 +125,35 @@ Our project is a software application that provides users a way to balance out t
 - *Quotes and Motivations*:
   - Quote: "I need to shrink this tummy of mine"
   - Motivation: "Exercise will help me to sustain this line of work for many years to come"
+
+
+## Rain Outline your technology stack and why you chose it
+
+
+## John InProgress List of chosen APIs and why you chose them
+
+
+## Ryan InProgress Planned features per each API (in detail - 3 features per each API, 6 features minimum)
+
+
+## Ryan Work breakdown structure (WBS) including how the work was divided up and who has completed what element (including the actual report and presentation components)
+
+
+## Ryan Project schedule/timeline
+
+
+## Nam & John : InProgress Wireframes and prototype elements for the application interface
+
+Wireframe for Home, Recipes, and Exercise pages: 
+![Wireframe](images/wireframe.pdf)
+
+## Nam 2 Data flow diagrams (high level/overview - Level 0, another with details - Level 1) (3 marks each)
+
+Data Flow Diagram - Level 0:
+
+![DFD_level_0](images/DFD_1.pdf)
+
+Data Flow Diagram - Level 1:
+
+![DFD_level_1](images/DFD_2.pdf)
+

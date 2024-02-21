@@ -14,12 +14,6 @@ We chose HTML and JavaScript, including Bootstrap, for our project's tech stack 
 
 
 
-# Initiated GitHub project 
-
-2350_project
-
-
-
 # Setup Steps:
 - Clone the project from "git@github.com:RainZhao01/2350_project.git"
 

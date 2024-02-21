@@ -130,7 +130,6 @@ For our project, we decided to use the Kanban SDLC. We chose this due to the iss
 ## Outline your technology stack and why you chose it
 We chose HTML and JavaScript, including Bootstrap, for our project's tech stack because they're versatile and easy to use for creating interactive web apps. JavaScript enables dynamic features and real-time updates without page reloads. Plus, JavaScript libraries save time and effort, helping us build a project that can adapt to users' changing needs and new technologies.
 
-## Initiated GitHub project 
 
 ## List of chosen APIs and why you chose them
 We chose the Tasty API because it meets our requirements of the features that our application offers. The Tasty API allows us to generate recipes and nutritional facts. Based off of those, we will be able to manipulate that data into a readable format for the user. Tasty also has a large database of recipes, ensuring we meet the needs of the wide population while taking account of different dietary restrictions. The nutritional values from the generated recipes is what our feature two needs; Which is to calculate the calories and macros to achieve a balanced diet and weight goals. As for the third, the app will compare the recipe's ingredients to the user's.

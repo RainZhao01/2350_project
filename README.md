@@ -43,4 +43,8 @@ We chose HTML and JavaScript, including Bootstrap, for our project's tech stack 
 # when push the repository:
 # git push origin <your branch name>
 
+[Rain's Ai declaration form](/AI_Declarations/P1_AI_Declaration_Rain_Zhao_100366955.pdf) <br />
+[Ryan's Ai declaration form](/AI_Declarations/P1_AI_Declaration_Ryan_Yan_100390550.pdf)<br />
+[Nam's Ai declaration form](/AI_Declarations/P1_AI_Declaration_Nam_Le_100373942.pdf)
+<br />
 

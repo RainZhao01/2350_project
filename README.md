@@ -46,6 +46,6 @@ We chose HTML and JavaScript, including Bootstrap, for our project's tech stack 
 
 [Rain's Ai declaration form](/AI_Declarations/P1_AI_Declaration_Rain_Zhao_100366955.pdf)<br />
 [Ryan's Ai declaration form](/AI_Declarations/P1_AI_Declaration_Ryan_Yan_100390550.pdf)<br />
-[Nam's Ai declaration form](/AI_Declarations/P1_AI_Declaration_Nam_Le_100373942.pdf)
-<br />
+[Nam's Ai declaration form](/AI_Declarations/P1_AI_Declaration_Nam_Le_100373942.pdf)<br />
+[John's Ai declaration form](/AI_Declarations/P1_AI_Declaration_John_Baltazar_100398208.pdf.pdf)
 

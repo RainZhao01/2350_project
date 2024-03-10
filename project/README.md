@@ -1,3 +1,11 @@
+# Make sure to install
+
+Node - v20.11.1
+
+npm - version 10.2.4
+
+npm react-bootstrap bootstrap 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

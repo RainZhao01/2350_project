@@ -1,13 +1,13 @@
-# Report 
+# Report Draft
 
-## Overview of the project
-Our project is a software application that provides users a way to balance out their dietary and physical lifestyle. By combining two key API's: the Tasty API and Exercises API users will have access to a variety of health and lifestyle choices for everyone to benefit from. The Tasty API allows users to display recipes, generate meal plans, create grocery lists, and educational nutrition facts. Saving the time and energy that would have been otherwise wasted on planning and research. Complementing that is the Exercise API which will generate workout plans, provide alternatives to pre-existing workout plans and deliver informative demonstration videos. Given that our diets and physical health are closely intertwined, leveraging both APIs together is a great opportunity to streamline and create convenience for the average user. Pairing the Tasty and Exercises API’s together supplies users with detailed diets to meet their workout needs and vice versa. Creating a balance and convenience for users' physical health, dietary needs and overall lifestyle.
+## Nam : Overview of the project
+Our project is a software application that provides users a way to balance out their dietary and physical lifestyle. By combining two key API's: the Tasty API and Exercises API users will have access to a variety of health and lifestyle choices for everyone to benefit from. The Tasty API allos users to display recipes, generate meal plans, create grocery lists, and educational nutrition facts. Saving the time and energy that would have been otherwise wasted on planning and research. Complementing that is the Exercise API which will generate workout plans, provide alternatives to pre-existing workout plans and deliver informative demonstration videos. Given that our diets and physical health are closely intertwined, leveraging both APIs together is a great opportunity to streamline and create convenience for the average user. Pairing the Tasty and Exercises API’s together supplies users with detailed diets to meet their workout needs and vice versa. Creating a balance and convenience for users' physical health, dietary needs and overall lifestyle.
 
 
-## Outline which SDLC model was chosen and why
-For our project, we decided to use the Kanban SDLC. We chose this due to the issue with times when we can meet up. Some of us have schedules that do not remain consistent, so setting up dates to meet up can be difficult. Since we are a small team and our project is not super complex, we can use Kanban as it allows us more flexibility to work around our schedules. We also felt that due to the constraints of our schedules, this SDLC would provide us with the best efficiency for our project. It will also provide us with a better understanding of our group’s project progress, so we do not overstress ourselves without busy schedules. As this is our first time working with each other, it will also help with communication in cases such as someone spending a long time on a task and not asking for help.
+## Ryan : Outline which SDLC model was chosen and why
 
-## 2 User stories per each API (4 total, 1 mark each)
+
+## John :  2 User stories per each API (4 total, 1 mark each)
 
 **Tasty API**
 
@@ -127,49 +127,22 @@ For our project, we decided to use the Kanban SDLC. We chose this due to the iss
   - Motivation: "Exercise will help me to sustain this line of work for many years to come"
 
 
-## Outline your technology stack and why you chose it
-We chose HTML and JavaScript, including Bootstrap, for our project's tech stack because they're versatile and easy to use for creating interactive web apps. JavaScript enables dynamic features and real-time updates without page reloads. Plus, JavaScript libraries save time and effort, helping us build a project that can adapt to users' changing needs and new technologies.
+## Rain Outline your technology stack and why you chose it
 
 
-## List of chosen APIs and why you chose them
-We chose the Tasty API because it meets our requirements of the features that our application offers. The Tasty API allows us to generate recipes and nutritional facts. Based off of those, we will be able to manipulate that data into a readable format for the user. Tasty also has a large database of recipes, ensuring we meet the needs of the wide population while taking account of different dietary restrictions. The nutritional values from the generated recipes is what our feature two needs; Which is to calculate the calories and macros to achieve a balanced diet and weight goals. As for the third, the app will compare the recipe's ingredients to the user's.
-The Exercise API was chosen for similar reasons as it goes hand in hand with the Tasty API, and has a large database. Lining up the goals for the user will generate a dedicated workout plan tailored to different users and their goals, so that a middle aged woman and a young man have different workouts. 
-
-## Planned features per each API (in detail - 3 features per each API, 6 features minimum)
-
-Tasty Api:
-
-Feature #1
-This feature is generating recipes for the user. There will be options such as dietary restrictions, cooking levels, and calories. The dietary restrictions input will help users pick food that they can eat without issue. The cooking level input will help the users pick recipes that they can cook. The cooking level may be inaccurate as we are basing the difficulty on length. The calories will aid users meet their dietary needs.
-
-Feature #2:
-Our second feature is like our first, however, instead of a single recipe we are providing an entire meal plan. This meal plan can be for a single day or multiple days. Although you could use the first feature multiple times to make a meal plan, our second feature will serve as a better visualization of what the user is consuming. This is because when a user picks out 3 different meals using the first feature, it will not be tailored to their nutritional goal.
-
-Feature #3:
-This feature is similar to the first feature but focuses on what the user currently owns. This feature will be linked to the user’s account. It will be a list of groceries that the user currently owns and will search the Tasty Api for food that they can currently make.
-
-Exercise Api:
-
-Feature #1:
-This feature will create a workout plan for the user. This feature will be based on the user's experience and workout goals. The user will also be able to choose which muscle groups and the type of workout they want to do.
-
-Feature #2:
-This feature will allow users to change their preexisting workouts. They will be able to choose a workout they currently have and swap it out for an alternative workout that focuses on the same part of the body.
-
-Feature #3:
-Our final feature will allow the user to search for an exercise from the Exercise API and will be provided with a video to the user to explain it.
+## John InProgress List of chosen APIs and why you chose them
 
 
-## Work breakdown structure (WBS) including how the work was divided up and who has completed what element (including the actual report and presentation components)
+## Ryan InProgress Planned features per each API (in detail - 3 features per each API, 6 features minimum)
 
-![Project WBS](images/Project%20WBS.png)
-The task are not divided up due to our choice of the Kanban SDLC.
 
-## Project schedule/timeline
+## Ryan Work breakdown structure (WBS) including how the work was divided up and who has completed what element (including the actual report and presentation components)
 
-![Project Timeline](images/Project%20Timeline%20estimate.png)
 
-## Wireframes and prototype elements for the application interface
+## Ryan Project schedule/timeline
+
+
+## Nam & John : InProgress Wireframes and prototype elements for the application interface
 
 Wireframe for main pages: 
 
@@ -185,7 +158,7 @@ Exercise Page:
 ![Exercise_wireframe](images/Wireframe_Workouts.png)
 
 
-## 2 Data flow diagrams (high level/overview - Level 0, another with details - Level 1) (3 marks each)
+## Nam 2 Data flow diagrams (high level/overview - Level 0, another with details - Level 1) (3 marks each)
 
 Data Flow Diagram - Level 0:
 
@@ -194,6 +167,4 @@ Data Flow Diagram - Level 0:
 Data Flow Diagram - Level 1:
 
 ![DFD_level_1](images/DFD_2.png)
-
-
 

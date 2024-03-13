@@ -1,10 +1,14 @@
-# Make sure to install
-
+# Make sure to update or install
+Check Versions: 
 Node - v20.11.1
-
 npm - version 10.2.4
 
-npm react-bootstrap bootstrap 
+IMPORTANT Reinstall node_modules via:
+npm install
+
+Aditional Installs (DO NOT INSTALL AGAIN): 
+npm install bootstrap-icons
+npm install react-bootstrap bootstrap
 
 # Getting Started with Create React App
 

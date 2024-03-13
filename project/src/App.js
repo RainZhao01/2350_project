@@ -1,10 +1,15 @@
 import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { NavBar } from './Basic_Layout_Components/NavBar'
 import { RecipeOfTheDay } from './Recipes_Page_Components/Today_Recipe';
 import { TrendingRecipe } from './Recipes_Page_Components/Trending_Recipes';
+
+import NavBar from './components/Nav/NavBar'
+import Footer from './components/Footer/FooterBar'
 
 //Idk how to do link pages so everything is here so I can see the page
 function App() {
@@ -26,6 +31,7 @@ function App() {
         </Row>
       </Container>
     </>
+      <Footer/>
   );
 }
 

@@ -6,6 +6,10 @@ npm - version 10.2.4
 IMPORTANT Reinstall node_modules via:
 npm install
 
+Aditional Installs (DO NOT INSTALL AGAIN): 
+npm install bootstrap-icons
+npm install react-bootstrap bootstrap
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

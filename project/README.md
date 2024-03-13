@@ -9,6 +9,7 @@ npm install
 Aditional Installs (DO NOT INSTALL AGAIN): 
 npm install bootstrap-icons
 npm install react-bootstrap bootstrap
+npm install react-router-dom
 
 # Getting Started with Create React App
 

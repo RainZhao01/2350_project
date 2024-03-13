@@ -13,7 +13,7 @@ export function NavBar() {
         <>
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container className='ms-1'>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#home">υγεία</Navbar.Brand>
                     <Nav className="me-auto">
                         {/*The links do not go anywhere current */}
                         <Nav.Link href="#home">Healthy Recipes</Nav.Link>

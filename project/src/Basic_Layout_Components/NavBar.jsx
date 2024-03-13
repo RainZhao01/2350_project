@@ -13,11 +13,11 @@ export function NavBar() {
         <>
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container className='ms-1'>
-                    <Navbar.Brand href="#home">υγεία</Navbar.Brand>
+                    <Navbar.Brand href="/">υγεία</Navbar.Brand>
                     <Nav className="me-auto">
                         {/*The links do not go anywhere current */}
-                        <Nav.Link href="#home">Healthy Recipes</Nav.Link>
-                        <Nav.Link href="#features">Exercise Assistance</Nav.Link>
+                        <Nav.Link href="/">Healthy Recipes</Nav.Link>
+                        <Nav.Link href="Workout">Exercise Assistance</Nav.Link>
                     </Nav>
                 </Container>
                 <Container style={{justifyContent: 'end'}}>

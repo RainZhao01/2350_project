@@ -1,33 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Button from 'react-bootstrap/Button'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+import { NavBar } from './Basic_Layout_Components/NavBar'
+import { FooterBar } from './Basic_Layout_Components/FooterBar'
+import { Routes, Route } from 'react-router-dom';
+import { Recipes } from './Recipes_Page_Components/Recipes' 
+import { NotFoundPage } from './pages/NotFoundPage' 
+import { Workout } from './Workout_Page_Component/Workout'
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <MyButton />
-      </header>
-    </div>
-  );
-}
+    <>
+    <NavBar/>
+      <Routes>
+        <Route path="/" element={<Recipes />}/>
+        <Route path="/Workout" element={<Workout />}/>
+        <Route path="/NotFound" element={<NotFoundPage />} />
+      </Routes>
+      <FooterBar/>
+    </>
 
-
-function MyButton() {
-  return (
-    <Button>I'm a button</Button>
   );
 }
 

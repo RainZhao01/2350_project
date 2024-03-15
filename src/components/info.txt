@@ -1,0 +1,29 @@
+For each component, add the its own css file inside (same exact name as jsx, but .css instead)
+
+public folder is for all the public images
+
+Dist folder is the bundled version of the app (advantage over react app) thus making it load faster, all assets are in one place.
+    portable way to upload it to a web server
+
+
+This is how the structure works:
+it loads index -> app.jsx -> within that is all of the routing -> all routes are under components for diff pages
+
+
+react page router sends it to (defined in app.jsx) 
+    wihtin recipe template, it would call the api within the page to fill out the rest of the template (use effect, with empy dependancy bracket and inside that is the api filler)
+    <Route path="heroes/:id" component={Hero} />
+        this is a dynamic url. that id gets passed as a variable to the app, and it reads globally 
+    Itll also have a search page(like searching on google) for recipes and then once they click a recipe, it'll point to 
+    the dynamic url(within this will fill it).
+
+    how to approach: 
+    START with making recipe of the day
+
+    first set up the template of a recipe page
+        make it print in an h1
+        then just build out the page
+
+Explaination of why its worth changing to vite(and not using create react app)
+    https://vitejs.dev/guide/why.html
+    General reasons: speed, ease of use, more compatibility

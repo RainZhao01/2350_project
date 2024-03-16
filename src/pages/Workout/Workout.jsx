@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Container, Row, Col } from 'react-bootstrap';
-import { WorkoutOfTheDay } from './Today_Workout';
-import { TrendingWorkout } from './Trending_Workout';
+import { WorkoutOfTheDay } from '../../components/Workout_Page_Component/Today_Workout';
+import { TrendingWorkout } from '../../components/Workout_Page_Component/Trending_Workout';
 
 export function Workout() {
   return (

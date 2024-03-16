@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Container, Row, Col } from 'react-bootstrap';
-import { RecipeOfTheDay } from './Today_Recipe';
-import { TrendingRecipe } from './Trending_Recipes';
+import { RecipeOfTheDay } from '../../components/Recipes_Page_Components/Today_Recipe';
+import { TrendingRecipe } from '../../components/Recipes_Page_Components/Trending_Recipes';
 
 export function Recipes() {
   return (

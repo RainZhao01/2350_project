@@ -10,10 +10,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { NavBar } from './components/Basic_Layout_Components/NavBar.jsx'
 import { FooterBar } from './components/Basic_Layout_Components/FooterBar.jsx'
 import { Routes, Route } from 'react-router-dom';
-import { Recipes } from './components/Recipes_Page_Components/Recipes.jsx' 
-//add recipe template page
+import { Recipes } from './pages/Recipe/Recipes.jsx' 
+//add recipe template page the page that reloads to diff recipices
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
-import { Workout } from './components/Workout_Page_Component/Workout.jsx'
+import { Workout } from './pages/Workout/Workout.jsx'
 
 
 export function App() { 

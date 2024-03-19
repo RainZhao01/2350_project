@@ -1,9 +1,15 @@
-import React from 'react';
-
 import { Container, Row, Col } from 'react-bootstrap';
 import { WorkoutOfTheDay } from '../../components/Workout_Page_Component/Today_Workout';
 import { TrendingWorkout } from '../../components/Workout_Page_Component/Trending_Workout';
+import { useEffect } from 'react'
 
+export default function Definition() {
+  useEffect(() => {
+    console.log('page loaded');
+  }, []);
+
+  return <Container><Row><h1>Loaded page</h1></Row></Container>
+}
 export function Workout() {
   return (
 

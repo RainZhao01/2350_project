@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+
 import './App.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,6 +18,7 @@ import { Recipes } from './pages/Recipe/Recipes.jsx'
 
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
 import { Workout } from './pages/Workout/Workout.jsx'
+import { WAPI } from './pages/Workout/Workout_API.jsx'
 
 
 export function App() { 
@@ -26,6 +28,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<Recipes />}/>
         <Route path="/Workout" element={<Workout />}/>
+        <Route path="/Workout_API" element={  <WAPI await/>}></Route>
         <Route path="/NotFound" element={<NotFoundPage />} />
       </Routes>
       <FooterBar/>

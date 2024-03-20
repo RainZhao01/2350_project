@@ -1,10 +1,16 @@
-import React from 'react';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
+import { PropTypes } from 'prop-types';
+import { Workout_API_Name, Workout_API_Type, Workout_API_Muscle, Workout_API_Difficulty, Workout_API_Equipment, Workout_API_Instruction} from '../../pages/Workout/Workout_API.jsx'
+
 //This is only a layout for how the Trending Workout componet is going to look like as the Tasty API has not been added
 //Paramters need to be added when Api is added
-export function TrendingWorkout() {
+export function TrendingWorkout(props) {
+
+    const index = props.parameter
+
     return (
         <Card className='m-4' style={{ width: '36rem' }}>
             <div className="row g-0">
@@ -18,9 +24,12 @@ export function TrendingWorkout() {
                 <div className="col-md-6">
                     <Card.Body className='row g-0 '>
                         {/*The Workout name and food description will be added when API is added*/}
-                        <Card.Title>Workout name</Card.Title>
+                        <Card.Title><Workout_API_Name parameter={index}/></Card.Title>
                         <Card.Text>
-                            <p>Workout description</p>
+                            <ListGroup>
+                            <ListGroup.Item>Type: <Workout_API_Type parameter={index}/></ListGroup.Item>
+                            <ListGroup.Item>Difficulty: <Workout_API_Difficulty parameter={index}/></ListGroup.Item>
+                            </ListGroup>
                         </Card.Text>
                         {/*Button will link to a different page containing more info on the Workout. It its current state the button does nothing*/}
                         <Button variant="dark">More Details</Button>
@@ -30,3 +39,8 @@ export function TrendingWorkout() {
         </Card>
     )
 }
+
+TrendingWorkout.propTypes = {
+    parameter: PropTypes.number.isRequired,
+  };
+  

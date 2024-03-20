@@ -1,4 +1,3 @@
-import React from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -18,7 +17,6 @@ export function NavBar() {
                         {/*The links do not go anywhere current */}
                         <Nav.Link href="/">Healthy Recipes</Nav.Link>
                         <Nav.Link href="Workout">Exercise Assistance</Nav.Link>
-                        <Nav.Link href="Workout_API">WAPI</Nav.Link>
                     </Nav>
                 </Container>
                 <Container style={{justifyContent: 'end'}}>

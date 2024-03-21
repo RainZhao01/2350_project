@@ -13,7 +13,6 @@ export function Workout() {
     const apiURL = `https://api.api-ninjas.com/v1/exercises?muscle=${selectedMuscle}`
     const apiKey = '8WacI8oTPJlw4eKy8o/G5w==Y8ImexMsyoESAfaG'
 
-
     fetch(apiURL, {
       headers: {
         'X-Api-Key': `${apiKey}`,
@@ -37,8 +36,6 @@ export function Workout() {
 
   return (
     <>
-
-
       <DropdownButton id="dropdown-basic-button" title="Select Muscle">
         <Dropdown.Item onClick={() => handleSelect("abdominals")}>abdominals</Dropdown.Item>
         <Dropdown.Item onClick={() => handleSelect("abductors")}>abductors</Dropdown.Item>

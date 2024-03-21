@@ -18,7 +18,7 @@ import { Recipes } from './pages/Recipe/Recipes.jsx'
 
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
 import { Workout } from './pages/Workout/Workout.jsx'
-import { Workout_API } from './pages/Workout/Workout_API.jsx'
+// import { Workout_API } from './pages/Workout/Workout_API.jsx'
 
 
 export function App() { 
@@ -28,7 +28,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<Recipes />}/>
         <Route path="/Workout" element={<Workout />}/>
-        <Route path="/Workout_API" element={<Workout_API />}></Route>
+        {/* <Route path="/Workout_API" element={<Workout_API />}></Route> */}
         <Route path="/NotFound" element={<NotFoundPage />} />
       </Routes>
       <FooterBar/>

@@ -79,7 +79,7 @@ export function Workout_API_Difficulty(props) {
   )
 }
 
-Workout_API_Difficulty.propTypes = {
+Workout_API_DifficultypropTypes = {
   parameter: PropTypes.number.isRequired,
 };
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Container, Row, Col } from 'react-bootstrap';
 import { WorkoutOfTheDay } from '../../components/Workout_Page_Component/Today_Workout';
 import { TrendingWorkout } from '../../components/Workout_Page_Component/Trending_Workout';

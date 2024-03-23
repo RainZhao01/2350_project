@@ -9,9 +9,9 @@ export function Workout() {
   const [selectedMuscle, setSelectedMuscle] = useState('abdominals');
 
   useEffect(() => {
-    // const muscle = selectedMuscle
     const apiURL = `https://api.api-ninjas.com/v1/exercises?muscle=${selectedMuscle}`
-    const apiKey = '8WacI8oTPJlw4eKy8o/G5w==Y8ImexMsyoESAfaG'
+    // Uncomment only if you are trying to test/run workout API
+    // const apiKey = '8WacI8oTPJlw4eKy8o/G5w==Y8ImexMsyoESAfaG' 
 
     fetch(apiURL, {
       headers: {

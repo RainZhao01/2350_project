@@ -11,7 +11,10 @@ import { NavBar } from './components/Basic_Layout_Components/NavBar.jsx'
 import { FooterBar } from './components/Basic_Layout_Components/FooterBar.jsx'
 import { Routes, Route } from 'react-router-dom';
 import { Recipes } from './pages/Recipe/Recipes.jsx' 
-//add recipe template page the page that reloads to diff recipices
+
+//add recipe template page
+
+
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
 import { Workout } from './pages/Workout/Workout.jsx'
 

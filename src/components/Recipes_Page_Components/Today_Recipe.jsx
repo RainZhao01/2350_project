@@ -9,24 +9,26 @@ import {useState, useEffect} from 'react'
 export function RecipeOfTheDay() {
   const [name , setName] = useState();
   const [description , setDescription] = useState();
-  const [img, setImage] = useState();
+  const [image, setImage] = useState();
   const [hours , setHours] = useState();
   const [minutes, setMinutes] = useState();
   const [positiveRating, setPositiveRating] = useState();
-  const [negativeRating, setNegativeRating] = useState()
+  const [negativeRating, setNegativeRating] = useState();
+
+  //does not change daily.
   useEffect(() => {
-    const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&tags=meal';
-  
+    const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&tags=meal,healthy';
+    
     fetch(dailyRecipeUrl,{
       headers: {
-        'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
+        // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
         'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
       } 
 
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         setImage(data["results"][0].thumbnail_url);
         setName(data["results"][0].name);
         setDescription(data["results"][0].description);
@@ -44,7 +46,7 @@ export function RecipeOfTheDay() {
     <Card className='m-2' style={{ width: '70rem' }}>
       <div className="row g-0">
         <div className="col-md-7">
-          <Card.Img variant="top" src={img} style={{ marginTop: '10px', marginBottom: '10px', borderRadius: 10 }} />
+          <Card.Img variant="top" src={image} style={{ marginTop: '10px', marginBottom: '10px', borderRadius: 10 }} />
         </div>
         <div className="col-md-5">
           <Card.Body className='row g-0 '>

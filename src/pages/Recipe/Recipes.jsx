@@ -14,7 +14,7 @@ export function Recipes() {
     
     fetch(dailyRecipeUrl,{
       headers: {
-        'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
+        // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
         'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
       } 
 
@@ -22,6 +22,7 @@ export function Recipes() {
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data);
+        console.log(data);
         
       })
       .catch((error) => {
@@ -38,12 +39,13 @@ export function Recipes() {
       </Row>
       <Row>
         <h5>Popular Recipes</h5>
-        {recipes["results"].map((data, index) => (
+        {recipes["results"]?.map((data, index) => (
             <React.Fragment key={index}>
               <Col>
-              <TrendingRecipe name={data["results"][0].name} image={data["results"][0].thumbnail_url} description={data["results"][0].description}
-              hours={Math.floor(data["results"][0].total_time_minutes/60)} minutes={data["results"][0].total_time_minutes%60}
-              positiveRating={data["results"][0].user_ratings.count_positive} negativeRating={data["results"][0].user_ratings.count_negative}/>
+              <p></p>
+              <TrendingRecipe name={data.name} image={data.thumbnail_url} description={data.description}
+              hours={Math.floor(data.total_time_minutes/60)} minutes={data.total_time_minutes%60}
+              positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}/>
               </Col>
               {(index + 1) % 2 === 0 && <div className="w-100"></div>}
             </React.Fragment>

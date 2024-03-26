@@ -1,16 +1,19 @@
 
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button} from 'react-bootstrap';
 import { RecipeOfTheDay } from '../../components/Recipes_Page_Components/Today_Recipe';
 import { TrendingRecipe } from '../../components/Recipes_Page_Components/Trending_Recipes';
 import {useState, useEffect} from 'react'
 import React from 'react';
+import './Recipes.css';
 
 export function Recipes() {
 
   const [recipes, setRecipes] = useState([]);
 
+  
+
   useEffect(() => {
-    const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=1&size=4&tags=meal,healthy';
+    const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=4&tags=meal,healthy';
     
     fetch(dailyRecipeUrl,{
       headers: {
@@ -38,13 +41,24 @@ export function Recipes() {
         <RecipeOfTheDay />
       </Row>
       <Row>
+        <Col>
+          <Button className='d-flex align-items-center justify-content-center recipe-button' variant='dark' href="/SearchRecipes">
+            Find a Recipe
+          </Button>
+        </Col>
+        <Col>
+          <Button className='d-flex align-items-center justify-content-center recipe-button' variant='dark' href="#">
+            Create a Meal Plan
+          </Button>
+        </Col>
+      </Row>
+      <Row>
         <h5>Popular Recipes</h5>
         {recipes["results"]?.map((data, index) => (
             <React.Fragment key={index}>
               <Col>
               <p></p>
               <TrendingRecipe name={data.name} image={data.thumbnail_url} description={data.description}
-              hours={Math.floor(data.total_time_minutes/60)} minutes={data.total_time_minutes%60}
               positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}/>
               </Col>
               {(index + 1) % 2 === 0 && <div className="w-100"></div>}

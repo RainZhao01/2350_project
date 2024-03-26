@@ -10,14 +10,14 @@ export function RecipeOfTheDay() {
   const [name , setName] = useState();
   const [description , setDescription] = useState();
   const [image, setImage] = useState();
-  const [hours , setHours] = useState();
-  const [minutes, setMinutes] = useState();
   const [positiveRating, setPositiveRating] = useState();
   const [negativeRating, setNegativeRating] = useState();
 
   //does not change daily.
   useEffect(() => {
-    const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&tags=meal,healthy';
+    const date = new Date();
+    const currentDay = date.getDay() + 4;
+    const dailyRecipeUrl = `https://tasty.p.rapidapi.com/recipes/list?from=${currentDay}&size=1&tags=meal,healthy`;
     
     fetch(dailyRecipeUrl,{
       headers: {
@@ -32,8 +32,6 @@ export function RecipeOfTheDay() {
         setImage(data["results"][0].thumbnail_url);
         setName(data["results"][0].name);
         setDescription(data["results"][0].description);
-        setHours(Math.floor(data["results"][0].total_time_minutes/60));
-        setMinutes(data["results"][0].total_time_minutes%60);
         setPositiveRating(data["results"][0].user_ratings.count_positive);
         setNegativeRating(data["results"][0].user_ratings.count_negative);
       })
@@ -53,7 +51,6 @@ export function RecipeOfTheDay() {
             <Card.Title>{ name }</Card.Title>
             <Card.Text>
               <ListGroup>
-                <ListGroup.Item>Time: { hours } hours { minutes } minutes. </ListGroup.Item>
                 <ListGroup.Item>Description: { description } </ListGroup.Item>
                 <ListGroup.Item>Rating Positive: { positiveRating } Negative: { negativeRating} </ListGroup.Item>
               </ListGroup>

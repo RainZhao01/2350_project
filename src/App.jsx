@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+
 import './App.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,7 +12,7 @@ import { NavBar } from './components/Basic_Layout_Components/NavBar.jsx'
 import { FooterBar } from './components/Basic_Layout_Components/FooterBar.jsx'
 import { Routes, Route } from 'react-router-dom';
 import { Recipes } from './pages/Recipe/Recipes.jsx' 
-
+import { Workout_Details } from './components/Workout_Page_Component/Workout_Details.jsx';
 //add recipe template page
 
 
@@ -22,10 +23,14 @@ import { Workout } from './pages/Workout/Workout.jsx'
 export function App() { 
   return (
     <>
+    
     <NavBar/>
       <Routes>
+      <Route path="/Workout_Details" element={<Workout_Details/>}/>
+
         <Route path="/" element={<Recipes />}/>
         <Route path="/Workout" element={<Workout />}/>
+
         <Route path="/NotFound" element={<NotFoundPage />} />
       </Routes>
       <FooterBar/>

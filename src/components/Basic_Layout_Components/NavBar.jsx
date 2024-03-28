@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Clock } from './Clock'
 
 export function NavBar() {
     return (
@@ -19,10 +20,11 @@ export function NavBar() {
                         <Nav.Link href="Workout">Exercise Assistance</Nav.Link>
                     </Nav>
                 </Container>
-                <Container style={{justifyContent: 'end'}}>
+                <Container style={{ justifyContent: 'end' }}>
                     {/*The form current does nothing nor does*/}
+                    <Navbar.Text className='mx-1'><Clock/></Navbar.Text>
                     <Form inline>
-                        <Row>
+                        <Row>                    
                             <Col xs="auto" >
                                 <Form.Control
                                     type="text"

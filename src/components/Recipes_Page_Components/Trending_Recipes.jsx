@@ -2,8 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { PropTypes } from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
-//This is only a layout for how the Trending recipes componet is going to look like as the Tasty API has not been added
-//Paramters need to be added when Api is added
+
 export function TrendingRecipe(props) {
     let name = props.name;
     let description = props.description;

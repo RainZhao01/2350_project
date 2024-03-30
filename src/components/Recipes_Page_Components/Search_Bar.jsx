@@ -1,7 +1,9 @@
-import { Row, Form, Col, Button, DropdownButton } from 'react-bootstrap';
+import { Row, Form, Col, Button, DropdownButton} from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
 import {useState} from 'react'
 import { PropTypes } from 'prop-types';
+import FormControl from 'react-bootstrap/FormControl'
+
 // import React from 'react';
 
 import './Search_Bar.css';
@@ -14,6 +16,7 @@ export function SearchBar({apiCall}) {
     const [cuisine, setCuisine] = useState("");
     const [mealType, setMealType] = useState("");
     const [cookingMethod, setCookingMethod] = useState("");
+    const [recipeName, setRecipeName] = useState("");
 
     const handleDifficulty = (eventKey) => {
         setDifficulty(eventKey);
@@ -34,19 +37,29 @@ export function SearchBar({apiCall}) {
     const handleCookingMethod = (eventKey) =>{
         setCookingMethod(eventKey);
     }
+    const handleChange = (eventKey) =>{
+        console.log(eventKey);
+        setRecipeName(eventKey);
+    }
+
+    const getUrl = () =>{
+        apiCall(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=10&q=${recipeName}&tags=meal,healthy,${difficulty},${dietaryRestriction},${cuisine},${mealType},${cookingMethod}`)
+    }
 
     return (
         <Form >
             <Row>
                 <Col style={{ width: '100%', marginBottom: '10px', marginTop: '10px' }} >
-                    <Form.Control
+                    <FormControl
                         type="text"
                         placeholder="Search"
                         className=" mr-sm-2"
+                        value={recipeName}
+                        onChange={(e) => handleChange(e.target.value)}
                     />
                 </Col>
                 <Col xs="auto">
-                    <Button onClick={() => apiCall(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=4&tags=meal,healthy,${difficulty},${dietaryRestriction},${cuisine},${mealType},${cookingMethod}`)} type="submit">Submit</Button>
+                    <Button onClick={() => getUrl()} type="submit">Submit</Button>
                 </Col>
             </Row>
             <Row xs="auto">

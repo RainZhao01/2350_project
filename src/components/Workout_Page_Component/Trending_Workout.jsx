@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 //This is only a layout for how the Trending Workout componet is going to look like as the Tasty API has not been added

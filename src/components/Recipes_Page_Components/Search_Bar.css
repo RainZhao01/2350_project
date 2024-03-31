@@ -1,3 +1,4 @@
-.Dropdown{
-    margin: 0px;
+.Dropdown-item{
+    max-height: 200px;
+    overflow-y: scroll;
 }

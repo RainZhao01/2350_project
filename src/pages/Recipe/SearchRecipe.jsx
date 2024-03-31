@@ -8,7 +8,7 @@ import { SearchResult } from '../../components/Recipes_Page_Components/Search_Re
 
 export function SearchRecipes() {
     //use apiUrl to get the recipe resuls.
-    const [apiUrl, setApiUrl] = useState('https://tasty.p.rapidapi.com/recipes/list?from=0&size=10&tags=meal,healthy');
+    const [apiUrl, setApiUrl] = useState('https://tasty.p.rapidapi.com/recipes/list?from=0&size=5&tags=meal,healthy');
     const [serachResults, setSearchResults] = useState([]);
 
     useEffect(() => {
@@ -30,6 +30,7 @@ export function SearchRecipes() {
     }, [apiUrl]);
 
     const apiCall = (url) => {
+        console.log(url)
         setApiUrl(url);
     }
 
@@ -39,10 +40,10 @@ export function SearchRecipes() {
             <Row>
                 <SearchBar apiCall={apiCall} />
             </Row>
-            <Row style={{ justifyContent: 'center' }}>
+            <Row style={{ justifyContent: 'center', marginTop: '20px'}}>
                 <h4>Search Results: </h4>
             </Row>
-            <Row>
+            <Row >
                 {serachResults["results"]?.map((data, index) => (
                     <React.Fragment key={index}>
                         <Row>

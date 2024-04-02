@@ -4,8 +4,6 @@ import { useState } from 'react'
 import { PropTypes } from 'prop-types';
 import FormControl from 'react-bootstrap/FormControl'
 
-// import React from 'react';
-
 import './Search_Bar.css';
 
 //will send the result of the search back to the SearchRecipe.jsx page to get the recipe results.
@@ -38,12 +36,11 @@ export function SearchBar({ apiCall }) {
         setCookingMethod(eventKey);
     }
     const handleChange = (eventKey) => {
-        console.log(eventKey);
         setRecipeName(eventKey);
     }
 
     const getUrl = () => {
-        apiCall(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=5&tags=healthy${difficulty}${dietaryRestriction}${cuisine}${mealType}${cookingMethod}&q=${recipeName}`)
+        apiCall(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=5&tags=healthy${difficulty}${dietaryRestriction}${cuisine}${mealType}${cookingMethod}&q=${recipeName.trim().replace(" ","%20")}`)
     }
 
     const afterSubmission = (eventKey) => {
@@ -53,7 +50,7 @@ export function SearchBar({ apiCall }) {
     return (
         <Form onSubmit={afterSubmission}>
             <Row>
-                <Col style={{ width: '100%', marginBottom: '10px', marginTop: '10px' }} >
+                <Col id='Search-Bar'>
                     <FormControl
                         type="text"
                         placeholder="Search"
@@ -62,7 +59,7 @@ export function SearchBar({ apiCall }) {
                         onChange={(e) => handleChange(e.target.value)}
                     />
                 </Col>
-                <Col xs="auto">
+                <Col id='Search-Submit' xs='auto'>
                     <Button onClick={() => getUrl()} type="submit">Submit</Button>
                 </Col>
             </Row>
@@ -119,7 +116,7 @@ export function SearchBar({ apiCall }) {
                         <Dropdown.Toggle variant='dark'>
                             Select Dietary Restriction
                         </Dropdown.Toggle>
-                        <Dropdown.Menu>
+                        <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",dairy_free")}>Dairy Free</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",vegan")}>Vegan</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",pescatarian")}>Pescatarian</Dropdown.Item>
@@ -136,7 +133,7 @@ export function SearchBar({ apiCall }) {
                         <Dropdown.Toggle variant='dark'>
                             Select Cooking Method
                         </Dropdown.Toggle>
-                        <Dropdown.Menu>
+                        <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleCookingMethod("something")}>something</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
@@ -146,7 +143,7 @@ export function SearchBar({ apiCall }) {
                         <Dropdown.Toggle variant='dark'>
                             Select Difficulty
                         </Dropdown.Toggle>
-                        <Dropdown.Menu>
+                        <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleDifficulty(",easy")}>Easy</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDifficulty(",under_30_minute")}>Under 30 Minutes</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDifficulty(",5_ingredients_or_less")}>5 Ingredients Or Less</Dropdown.Item>
@@ -158,7 +155,7 @@ export function SearchBar({ apiCall }) {
                         <Dropdown.Toggle variant='dark'>
                             Select Meal Type
                         </Dropdown.Toggle>
-                        <Dropdown.Menu>
+                        <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleMealType(",breakfast")}>Breakfast</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleMealType(",lunch")}>Lunch</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleMealType(",dinner")}>Dinner</Dropdown.Item>

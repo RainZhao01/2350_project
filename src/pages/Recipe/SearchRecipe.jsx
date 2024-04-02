@@ -14,7 +14,7 @@ export function SearchRecipes() {
     useEffect(() => {
         fetch(apiUrl, {
             headers: {
-                'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
+                // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
                 'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
             }
 
@@ -34,23 +34,30 @@ export function SearchRecipes() {
         setApiUrl(url);
     }
 
+    const tagsToString = (tags) => {
+        let tagArray = tags[0].display_name;
+        for(let i  = 1; i < tags.length; i++){
+            tagArray += ", " + tags[i].display_name;
+        }
+        return tagArray;
+    }
+
     return (
 
         <Container className='mt-4'>
             <Row>
                 <SearchBar apiCall={apiCall} />
             </Row>
-            <Row style={{ justifyContent: 'center', marginTop: '20px'}}>
+            <Row style={{ justifyContent: 'center', marginTop: '20px' }}>
                 <h4>Search Results: </h4>
             </Row>
             <Row >
                 {serachResults["results"]?.map((data, index) => (
                     <React.Fragment key={index}>
                         <Row>
-                            <p></p>
                             <SearchResult name={data.name} image={data.thumbnail_url} description={data.description}
                                 positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
-                                tags={data.tags} />
+                                tags={tagsToString(data.tags)} />
                         </Row>
                     </React.Fragment>
                 ))}

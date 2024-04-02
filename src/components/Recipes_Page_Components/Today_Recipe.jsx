@@ -13,7 +13,6 @@ export function RecipeOfTheDay() {
   const [positiveRating, setPositiveRating] = useState();
   const [negativeRating, setNegativeRating] = useState();
 
-  //does not change daily.
   useEffect(() => {
     const date = new Date();
     const currentDay = date.getDay() + 4;

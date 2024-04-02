@@ -1,4 +1,15 @@
-.Dropdown-item{
+.Dropdown-item {
     max-height: 200px;
     overflow-y: scroll;
+}
+
+#Search-Bar {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#Search-Submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

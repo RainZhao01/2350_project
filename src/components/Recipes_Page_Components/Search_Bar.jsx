@@ -11,8 +11,11 @@ export function SearchBar({ apiCall }) {
 
     const [difficulty, setDifficulty] = useState("");
     const [dietaryRestriction, setDietaryRestriction] = useState("");
+    const [dietaryRestrictionToggle, setDietaryRestrictionToggle] = useState("Select Dietary Restriction")
     const [cuisine, setCuisine] = useState("");
+    const [cuisineToggle, setCuisineToggle] = useState("Select Cuisine")
     const [mealType, setMealType] = useState("");
+    const [mealTypeToggle, setMealTypeToggle] = useState("Select Meal Type");
     const [cookingMethod, setCookingMethod] = useState("");
     const [recipeName, setRecipeName] = useState("");
 
@@ -22,14 +25,38 @@ export function SearchBar({ apiCall }) {
 
     const handleDietaryRestriction = (eventKey) => {
         setDietaryRestriction(eventKey);
+        if(eventKey == 'none'){
+            setDietaryRestriction("");
+            setDietaryRestrictionToggle("Select Dietary Restriction")
+        }
+        else{
+            let Uppercase = eventKey.charAt(1).toUpperCase();
+            setDietaryRestrictionToggle(Uppercase + eventKey.substring(2).replace("_"," "));
+        }
     }
 
     const handleCuisine = (eventKey) => {
         setCuisine(eventKey);
+        if(eventKey == 'none'){
+            setCuisine("");
+            setCuisineToggle("Select Cuisine")
+        }
+        else{
+            let Uppercase = eventKey.charAt(1).toUpperCase();
+            setCuisineToggle(Uppercase + eventKey.substring(2).replace("_"," "));
+        }
     }
 
     const handleMealType = (eventKey) => {
         setMealType(eventKey);
+        if(eventKey == 'none'){
+            setMealType("");
+            setMealTypeToggle("Select Meal Type")
+        }
+        else{
+            let Uppercase = eventKey.charAt(1).toUpperCase();
+            setCuisineToggle(Uppercase + eventKey.substring(2));
+        }
     }
 
     const handleCookingMethod = (eventKey) => {
@@ -68,9 +95,10 @@ export function SearchBar({ apiCall }) {
                 <Col>
                     <Dropdown>
                         <Dropdown.Toggle variant='dark'>
-                            Select Cuisine
+                            {cuisineToggle}
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
+                            <Dropdown.Item onClick={() => handleCuisine("none")}>None</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",british")}>British</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",italian")}>Italian</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",mexican")}>Mexican</Dropdown.Item>
@@ -114,9 +142,10 @@ export function SearchBar({ apiCall }) {
                 <Col>
                     <Dropdown>
                         <Dropdown.Toggle variant='dark'>
-                            Select Dietary Restriction
+                            {dietaryRestrictionToggle}
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
+                            <Dropdown.Item onClick={() => handleDietaryRestriction("none")}>None</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",dairy_free")}>Dairy Free</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",vegan")}>Vegan</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",pescatarian")}>Pescatarian</Dropdown.Item>
@@ -134,6 +163,7 @@ export function SearchBar({ apiCall }) {
                             Select Cooking Method
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
+                            <Dropdown.Item onClick={() => handleCookingMethod("none")}>None</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCookingMethod("something")}>something</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
@@ -144,6 +174,7 @@ export function SearchBar({ apiCall }) {
                             Select Difficulty
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
+                            <Dropdown.Item onClick={() => handleDifficulty("none")}>None</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDifficulty(",easy")}>Easy</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDifficulty(",under_30_minute")}>Under 30 Minutes</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDifficulty(",5_ingredients_or_less")}>5 Ingredients Or Less</Dropdown.Item>
@@ -153,9 +184,10 @@ export function SearchBar({ apiCall }) {
                 <Col>
                     <Dropdown>
                         <Dropdown.Toggle variant='dark'>
-                            Select Meal Type
+                            {mealTypeToggle}
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
+                            <Dropdown.Item onClick={() => handleMealType("none")}>None</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleMealType(",breakfast")}>Breakfast</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleMealType(",lunch")}>Lunch</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleMealType(",dinner")}>Dinner</Dropdown.Item>

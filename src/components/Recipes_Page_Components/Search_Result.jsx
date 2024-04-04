@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { PropTypes } from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
+import {Row, Col} from 'react-bootstrap';
 
 import './Search_Result.css';
 
@@ -15,11 +16,11 @@ export function SearchResult(props) {
 
     return (
         <Card className='m-4' style={{ width: '100%' }}>
-            <div className="row g-0">
-                <div className="col-md-6">
+            <Row className="g-0">
+                <Col className="md-6">
                     <Card.Img variant="top" src={image} className="resultImage" />
-                </div>
-                <div className="col-md-6">
+                </Col>
+                <Col className="md-6">
                     <Card.Body className='row g-0 '>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
@@ -32,8 +33,8 @@ export function SearchResult(props) {
                         {/* Button will link to a different page containing more info on the recipe. It its current state the button does nothing */}
                         <Button variant="dark">More Details</Button>
                     </Card.Body>
-                </div>
-            </div>
+                </Col>
+            </Row>
         </Card>
     )
 }

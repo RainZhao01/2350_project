@@ -9,8 +9,6 @@ export function Recipes() {
   
   const [recipes, setRecipes] = useState([]);
 
-  
-
   useEffect(() => {
     const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=4&tags=meal,healthy';
     

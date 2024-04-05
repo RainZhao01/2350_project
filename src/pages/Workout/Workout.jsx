@@ -8,12 +8,15 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 export function Workout() {
   let randomNum;
+
   const [muscle, setMuscle] = useState([]);
   const [filter, setFilter] = useState(false);
+  
 
   const [selectedMuscle, setSelectedMuscle] = useState('abdominals');
   const [selectedType, setSelectedType] = useState('strength');
   const [selectedDifficulty, setSelectedDifficulty] = useState('beginner');
+  
 
   const handleSelect = (muscle, type, difficulty) => {
     console.log(muscle)
@@ -33,6 +36,8 @@ export function Workout() {
     return Math.floor(Math.random() * (muscleLength() - 1) + 1);
   };
 
+
+
   useEffect(() => {
     const apiURL = `https://api.api-ninjas.com/v1/exercises?muscle=${selectedMuscle}`
     // Uncomment only if you are trying to test/run workout API
@@ -46,7 +51,8 @@ export function Workout() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setMuscle(data);
+        const workoutsWithCompletion = data.map(workout => ({ ...workout, completed: false }));
+        setMuscle(workoutsWithCompletion);
       })
       .catch((error) => {
         console.error('Error fetching data: ', error);
@@ -151,7 +157,9 @@ export function Workout() {
               {(index + 1) % 2 === 0 && <div className="w-100"></div>}
             </React.Fragment>
           ))}
-        </Row>
+        </Row> 
+
+
       </Container>
     </>
   );

@@ -8,7 +8,13 @@ export function Workout_Details() {
     const { equipment } = location.state
     const { difficulty } = location.state
     const { instructions } = location.state
-
+//1
+    const handleAddToYourWorkout = () => {
+        const workout = { name, type, muscle, equipment, difficulty, instructions };
+        addWorkout(workout);
+        history.push('/your-workouts');
+    };
+    //1
     return (
         <Container className='mt-4'>
             <Row className='justify-content-center mb-4'>
@@ -28,6 +34,7 @@ export function Workout_Details() {
                                 <ListGroup.Item><strong>Instructions</strong>: {instructions} </ListGroup.Item>
                             </ListGroup>
                             </Card.Text>
+                            <Button variant='primary' onClick={handleAddToYourWorkout}>Add to Your Workout</Button>
                         </Card.Body>
                     </Card>
                 </Col>

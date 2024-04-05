@@ -14,13 +14,10 @@ import { Recipes } from './pages/Recipe/Recipes.jsx';
 import { SearchRecipes } from './pages/Recipe/SearchRecipe.jsx';
 
 
-
-//add recipe template page
-
-
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
 import { Workout } from './pages/Workout/Workout.jsx'
 import { RecipeTemplate } from './pages/Recipe/RecipeTemplate.jsx';
+import { MealPlan } from './pages/Recipe/MealPlan.jsx';
 
 
 export function App() { 
@@ -33,6 +30,7 @@ export function App() {
         <Route path="/RecipeTemplate" element={<RecipeTemplate />} />
         <Route path="/NotFound" element={<NotFoundPage />} />
         <Route path="/SearchRecipes" element={<SearchRecipes />} />
+        <Route path="/MealPlan" element={<MealPlan />} />
       </Routes>
       <FooterBar/>
     </>

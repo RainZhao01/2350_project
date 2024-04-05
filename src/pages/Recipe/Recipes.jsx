@@ -17,6 +17,7 @@ export function Recipes() {
     
     fetch(dailyRecipeUrl,{
       headers: {
+        // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
         // 'X-RapidAPI-Key': '99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61',
         'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
       } 
@@ -59,7 +60,8 @@ export function Recipes() {
               <Col>
               <p></p>
               <TrendingRecipe name={data.name} image={data.thumbnail_url} description={data.description}
-              positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}/>
+              positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
+              dynamicData={data}/>
               </Col>
               {(index + 1) % 2 === 0 && <div className="w-100"></div>}
             </React.Fragment>

@@ -4,9 +4,12 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
+import {Row, Col} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 // import { RecipeTemplatePage } from '../../components/Recipes_Page_Components/RecipeTemplateComps';
+
+import './Today_Recipe.css';
 
 export function RecipeOfTheDay() {
   const [name , setName] = useState();
@@ -25,7 +28,7 @@ export function RecipeOfTheDay() {
     fetch(dailyRecipeUrl,{
       headers: {
         // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
-        'X-RapidAPI-Key': '99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61',
+        // 'X-RapidAPI-Key': '99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61',
         'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
       } 
 
@@ -52,28 +55,25 @@ export function RecipeOfTheDay() {
   }
 
   return (
-    <Card className='m-2' style={{ width: '70rem' }}>
-      <div className="row g-0">
-        <div className="col-md-7">
-          <Card.Img variant="top" src={image} style={{ marginTop: '10px', marginBottom: '10px', borderRadius: 10 }} />
-        </div>
-        <div className="col-md-5">
-          <Card.Body className='row g-0 '>
+    <Card className='m-2' id='rotdCard'>
+      <Row className="g-0">
+        <Col className="md-4">
+          <Card.Img variant="top" id='rotdImage' src={image}/>
+        </Col>
+        <Col className="md-8">
+          <Card.Body className='row g-0, my-auto'>
             <Card.Title>{ name }</Card.Title>
             <Card.Text>
               <ListGroup>
-                <ListGroup.Item>Description: { description } </ListGroup.Item>
-                <ListGroup.Item>Rating Positive: { positiveRating } Negative: { negativeRating} </ListGroup.Item>
+                <ListGroup.Item id='rotdDescription'>{ description }  </ListGroup.Item>
+                <ListGroup.Item>&#x1F44D;: { positiveRating } &#128078;: { negativeRating} </ListGroup.Item>
               </ListGroup>
             </Card.Text>
             {/*Button will link to a different page containing more info on the recipe. It its current state the button does nothing*/}
             <Button variant="dark" onClick={onMoreDetailsClick} >More Details</Button>
           </Card.Body>
-        </div>
-      </div>
-      <div>
-    </div>
+        </Col>
+      </Row>
     </Card>
-    
   )
 }

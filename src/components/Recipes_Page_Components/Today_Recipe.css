@@ -1,0 +1,29 @@
+#rotdDescription{
+    height: 11rem;
+    width: 43.6rem;
+    overflow: hidden;
+}
+
+#rotdDescription:before {
+    content:'';
+    width:100%;
+    height:100%;    
+    position:absolute;
+    left:0;
+    top:0;
+    background:linear-gradient(transparent 150px, white);
+}
+
+#rotdCard {
+    width: 70rem;
+    height: 21rem;
+    align-items: center;
+}
+
+#rotdImage{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10;
+    width: 19.2rem;
+    height: 19.2rem;
+}

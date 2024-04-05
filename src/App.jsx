@@ -13,8 +13,6 @@ import { Routes, Route } from 'react-router-dom';
 import { Recipes } from './pages/Recipe/Recipes.jsx'; 
 import { SearchRecipes } from './pages/Recipe/SearchRecipe.jsx';
 
-
-
 //add recipe template page
 
 

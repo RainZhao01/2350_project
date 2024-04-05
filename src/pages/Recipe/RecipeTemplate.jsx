@@ -9,15 +9,11 @@ export function RecipeTemplate() {
   const location = useLocation();
   const { data } = location.state;
 
-  const test = () => {
-    console.log(data);
-  }
   return (
     
     <Container className='mt-4'>
         <Row style={{ justifyContent: 'center' }}>
           <RecipeTemplatePage 
-          test={test}
           name={data.name} 
           image={data.thumbnail_url}
           description={data.description} hours={data.hours} 

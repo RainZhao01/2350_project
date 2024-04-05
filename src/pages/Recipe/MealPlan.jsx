@@ -6,7 +6,10 @@ export function MealPlanPage(){
     const [calorieGoal, setCalorieGoal] = useState('');
     const [dietaryRestriction, setDietaryRestriction] = useState('');
     const [amountOfMeals, setAmountOfMeals] = useState(0);
-    const [recipes, setRecipes] = useState([]);
+    // const [recipes, setRecipes] = useState([]);
+    const [breakfastRecipes, setBreakfastRecipes] = useState([]);
+    const [lunchRecipes, setLunchRecipes] = useState([]);
+    const [dinnerRecipes, setDinnerRecipes] = useState([]);
 
     const handleFormSubmit = (formData) => {
         // Receive data and split into consts
@@ -16,6 +19,7 @@ export function MealPlanPage(){
         console.log('Calorie Goal:', calorieGoal);      
 
         calculateAmountOfMeals(calorieGoal);
+        calculateAmountOfMeals(amountOfMeals);
     };
 
     const calculateAmountOfMeals = (cal) => {
@@ -29,18 +33,54 @@ export function MealPlanPage(){
 
     useEffect(() => {
         const fetchRecipes = async () => {
+            //breakfast
             try {
-                const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=5&tags=meal,breakfast';
+                const randomRecipeStart = Math.floor(Math.random() * 100);
+                const breakfastRecipes = `https://tasty.p.rapidapi.com/recipes/list?from=${randomRecipeStart}&size=10&tags=meal,breakfast`;
 
-                const response = await fetch(dailyRecipeUrl, {
+                const breakfastResponse = await fetch(breakfastRecipes, {
                     headers: {
                         'X-RapidAPI-Key': '99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61',
                         'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
                     }
                 });
-                const data = await response.json();
-                setRecipes(data);
-                console.log(data);
+                const breakfastData = await breakfastResponse.json();
+                setBreakfastRecipes(breakfastData);
+                console.log(breakfastData);
+            } catch (error) {
+                console.error('Error fetching data: ', error);
+            }
+            //lunch call
+            try {
+                const randomRecipeStart = Math.floor(Math.random() * 100);
+                const lunchRecipes = `https://tasty.p.rapidapi.com/recipes/list?from=${randomRecipeStart}&size=10&tags=meal,lunch`;
+
+                const lunchResponse = await fetch(lunchRecipes, {
+                    headers: {
+                        'X-RapidAPI-Key': '99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61',
+                        'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+                    }
+                });
+                const lunchData = await lunchResponse.json();
+                setBreakfastRecipes(lunchData);
+                console.log(lunchData);
+            } catch (error) {
+                console.error('Error fetching data: ', error);
+            }
+            //dinner
+            try {
+                const randomRecipeStart = Math.floor(Math.random() * 100);
+                const dinnerRecipes = `https://tasty.p.rapidapi.com/recipes/list?from=${randomRecipeStart}&size=10&tags=meal,dinner`;
+
+                const dinnerResponse = await fetch(dinnerRecipes, {
+                    headers: {
+                        'X-RapidAPI-Key': '99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61',
+                        'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+                    }
+                });
+                const dinnerData = await dinnerResponse.json();
+                setBreakfastRecipes(dinnerData);
+                console.log(dinnerData);
             } catch (error) {
                 console.error('Error fetching data: ', error);
             }

@@ -9,10 +9,6 @@ export function RecipeTemplate() {
   const location = useLocation();
   const { data } = location.state;
 
-  // if (!data) { 
-  //   return console.log(data);
-  // }
-
   const test = () => {
     console.log(data);
   }
@@ -23,10 +19,12 @@ export function RecipeTemplate() {
           <RecipeTemplatePage 
           test={test}
           name={data.name} 
-          // image={data.thumbnail_url}
+          image={data.thumbnail_url}
           description={data.description} hours={data.hours} 
           minutes={data.minutes} sections={data.sections} instructions={data.instructions}
-          positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}>
+          positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
+          video={data.original_video_url}
+          >
           </RecipeTemplatePage>
       </Row>
     </Container>

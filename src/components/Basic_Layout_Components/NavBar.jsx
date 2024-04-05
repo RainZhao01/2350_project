@@ -17,7 +17,6 @@ export function NavBar() {
                         {/*The links do not go anywhere current */}
                         <Nav.Link href="/">Healthy Recipes</Nav.Link>
                         <Nav.Link href="Workout">Exercise Assistance</Nav.Link>
-                        <Nav.Link href="RecipeTemplate">RecipeTemplate</Nav.Link>
                     </Nav>
                 </Container>
                 <Container style={{justifyContent: 'end'}}>

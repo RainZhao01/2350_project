@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 // import { RecipeTemplatePage } from '../../components/Recipes_Page_Components/RecipeTemplateComps';
 
 export function RecipeOfTheDay() {
@@ -13,6 +14,8 @@ export function RecipeOfTheDay() {
   const [image, setImage] = useState();
   const [positiveRating, setPositiveRating] = useState();
   const [negativeRating, setNegativeRating] = useState();
+  const [todayRecipeData, setTodayRecipeData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const date = new Date();
@@ -30,6 +33,9 @@ export function RecipeOfTheDay() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        console.log("Current data^^");
+        setTodayRecipeData(data["results"][0]);
+        console.log("Sent data^^");
         setImage(data["results"][0].thumbnail_url);
         setName(data["results"][0].name);
         setDescription(data["results"][0].description);
@@ -41,6 +47,9 @@ export function RecipeOfTheDay() {
         console.error('Error fetching data: ', error);
       })
   }, []);
+  const onMoreDetailsClick = () => {
+    navigate( '/RecipeTemplate', { state: {data:todayRecipeData} })             //this sends to tempComp
+  }
 
   return (
     <Card className='m-2' style={{ width: '70rem' }}>
@@ -58,7 +67,7 @@ export function RecipeOfTheDay() {
               </ListGroup>
             </Card.Text>
             {/*Button will link to a different page containing more info on the recipe. It its current state the button does nothing*/}
-            <Button variant="dark">More Details</Button>
+            <Button variant="dark" onClick={onMoreDetailsClick} >More Details</Button>
           </Card.Body>
         </div>
       </div>

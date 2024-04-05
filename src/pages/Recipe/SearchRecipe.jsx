@@ -42,7 +42,6 @@ export function SearchRecipes() {
         return tagArray;
     }
 
-
     return (
 
         <Container className='mt-4'>

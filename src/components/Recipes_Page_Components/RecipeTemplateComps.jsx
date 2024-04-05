@@ -1,11 +1,14 @@
 import Card from 'react-bootstrap/Card';
 import { PropTypes } from 'prop-types';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 export function RecipeTemplatePage(props) {
     let name = props.name;
     let description = props.description;
     let hours = props.hours;
     let minutes = props.minutes;
+    let image = props.image;
+    let video = props.video;
     let positiveRating = props.positiveRating;
     let negativeRating = props.negativeRating;
     let sections = props.sections;
@@ -29,28 +32,35 @@ export function RecipeTemplatePage(props) {
     });
     return (
         <Card className='template' style={{ width: '70rem' }}>
-        <h1>Recipe: {name}</h1>
-        <p>Description: {description}</p>
-        <p>Time: {hours} hours {minutes} minutes</p>
-        <p>Rating Positive: {positiveRating} Negative: {negativeRating}</p>
-        <h2>Ingredients:</h2>
-        <ul>
-            {ingredientsList.map((ingredient, index) => (
-                <li key={index}>
-                    {ingredient.ingredient} - {ingredient.measurements.map((measurement, index) => (
-                        <span key={index}>{measurement.quantity} {measurement.unit}</span>
-                    ))}
-                </li>
-            ))}
-        </ul>
-        <h2>Instructions:</h2>
-        <ul>
-            {instructions.map(instruction => (
-                <li key={instruction.id}>{instruction.display_text}</li>
-            ))}
-        </ul>
-        
+        <Card.Body>
+            <Card.Title>Recipe: {name}</Card.Title>
+            <Card.Img variant="top" src={image} className="resultImage" />
+            <Card.Text>Description: {description}</Card.Text>
+            <Card.Text>Time: {hours} hours {minutes} minutes</Card.Text>
+            <Card.Text>Rating Positive: {positiveRating} Negative: {negativeRating}</Card.Text>
+            <Card.Title>Ingredients:</Card.Title>
+            <ListGroup>
+                {ingredientsList.map((ingredient, index) => (
+                    <ListGroup.Item key={index}>
+                        {ingredient.ingredient} - {ingredient.measurements.map((measurement, index) => (
+                            <span key={index}>{measurement.quantity} {measurement.unit}</span>
+                        ))}
+                    </ListGroup.Item>
+                ))}
+            </ListGroup>
+            <Card.Title>Instructions:</Card.Title>
+            <ListGroup>
+                {instructions.map(instruction => (
+                    <ListGroup.Item key={instruction.id}>{instruction.display_text}</ListGroup.Item>
+                ))}
+            </ListGroup>
+            <div>
+                <iframe src={video} allowFullScreen style={{ color: 'white', width:'100%' , height:'20rem'}}>
+                </iframe>
+            </div>
+        </Card.Body>
     </Card>
+    
     )
 
 }
@@ -65,13 +75,6 @@ RecipeTemplatePage.propTypes = {
     image: PropTypes.string.isRequired,
     ingredients: PropTypes.array.isRequired, // could be array or string
     instructions: PropTypes.array.isRequired,
-    sections: PropTypes.array.isRequired
+    sections: PropTypes.array.isRequired,
+    video: PropTypes.string.isRequired
 };
-// pulled out tags like this, so its a dictionary in an array
-/* const tagsToString = (tags) => {
-    let tagArray = tags[0].display_name;
-    for(let i  = 1; i < tags.length; i++){
-        tagArray += ", " + tags[i].display_name;
-    }
-    return tagArray;
-*/ 

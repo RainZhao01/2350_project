@@ -55,7 +55,7 @@ export function Workout() {
 
   randomNum = trendingWorkout();
   return (
-<<<<<<< HEAD
+/*
 
     <Container className='mt-4'>
       <Row style={{ justifyContent: 'center' }}>
@@ -73,8 +73,7 @@ export function Workout() {
     </Container>
 
   )
-}
-=======
+}*/
     <>
       <Container className='mt-4'>
         <Row>
@@ -158,4 +157,4 @@ export function Workout() {
   );
 }
 
->>>>>>> f01c910e1e710914f8d454a6589788e7b9e6584d
+

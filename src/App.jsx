@@ -12,11 +12,6 @@ import { FooterBar } from './components/Basic_Layout_Components/FooterBar.jsx'
 import { Routes, Route } from 'react-router-dom';
 import { Recipes } from './pages/Recipe/Recipes.jsx'; 
 import { SearchRecipes } from './pages/Recipe/SearchRecipe.jsx';
-<<<<<<< HEAD
-=======
-
-
->>>>>>> feature1+2
 
 //add recipe template page
 

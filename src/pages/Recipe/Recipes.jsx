@@ -60,7 +60,8 @@ export function Recipes() {
               <Col>
               <p></p>
               <TrendingRecipe name={data.name} image={data.thumbnail_url} description={data.description}
-              positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}/>
+              positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
+              dynamicData={data}/>
               </Col>
               {(index + 1) % 2 === 0 && <div className="w-100"></div>}
             </React.Fragment>

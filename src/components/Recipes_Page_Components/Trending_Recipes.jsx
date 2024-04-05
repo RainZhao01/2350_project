@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import { PropTypes } from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {Row, Col} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+
 
 import './Trending_Recipes.css'
 
@@ -12,6 +14,16 @@ export function TrendingRecipe(props) {
     let image = props.image;
     let positiveRating = props.positiveRating;
     let negativeRating = props.negativeRating;
+
+    let dynamicData = props.dynamicData;
+
+    const navigate = useNavigate();
+    
+    function onMoreDetailsClick(){
+        console.log(dynamicData)
+        navigate( '/RecipeTemplate', { state: {data:dynamicData} })             //this sends to tempComp
+    }
+
     return (
         <Card className='m-0' id='prCard'>
             <Row className="g-0">
@@ -27,8 +39,7 @@ export function TrendingRecipe(props) {
                                 <ListGroup.Item>&#x1F44D;: { positiveRating } &#128078;: { negativeRating} </ListGroup.Item>
                             </ListGroup>
                         </Card.Text>
-                        <Button variant="dark">More Details</Button>
-                        {/* ^^^^ an href REcip Template, CREATE A TEMPLATEDATA, all data is in recips.jsx */}
+                        <Button variant="dark" onClick={onMoreDetailsClick} >More Details</Button>
                     </Card.Body>
                 </Col>
             </Row>
@@ -42,4 +53,5 @@ TrendingRecipe.propTypes = {
     image: PropTypes.string.isRequired,
     positiveRating: PropTypes.string.isRequired,
     negativeRating: PropTypes.string.isRequired,
+    dynamicData: PropTypes.array.isRequired,
 };

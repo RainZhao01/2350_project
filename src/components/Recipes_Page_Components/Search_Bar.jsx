@@ -10,6 +10,7 @@ import './Search_Bar.css';
 export function SearchBar({ apiCall }) {
 
     const [difficulty, setDifficulty] = useState("");
+    const [difficultyToggle, setDifficultyToggle] = useState("Select Difficulty")
     const [dietaryRestriction, setDietaryRestriction] = useState("");
     const [dietaryRestrictionToggle, setDietaryRestrictionToggle] = useState("Select Dietary Restriction");
     const [cuisine, setCuisine] = useState("");
@@ -22,6 +23,14 @@ export function SearchBar({ apiCall }) {
 
     const handleDifficulty = (eventKey) => {
         setDifficulty(eventKey);
+        if(eventKey == 'none'){
+            setDifficulty("");
+            setDifficultyToggle("Select Difficulty")
+        }
+        else{
+            let Uppercase = eventKey.charAt(1).toUpperCase();
+            setDifficultyToggle(Uppercase + eventKey.substring(2).replace("_"," "));
+        }
     }
 
     const handleDietaryRestriction = (eventKey) => {
@@ -56,7 +65,7 @@ export function SearchBar({ apiCall }) {
         }
         else{
             let Uppercase = eventKey.charAt(1).toUpperCase();
-            setCuisineToggle(Uppercase + eventKey.substring(2).replace("_"," "));
+            setMealTypeToggle(Uppercase + eventKey.substring(2).replace("_"," "));
         }
     }
 
@@ -173,18 +182,18 @@ export function SearchBar({ apiCall }) {
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleCookingMethod("none")}>None</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCookingMethod("bake")}>Bake</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCookingMethod("deep_fry")}>Deep Fry</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCookingMethod("grill")}>Grill</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCookingMethod("pan_fry")}>Pan Fry</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCookingMethod("steam")}>Steam</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod(",bake")}>Bake</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod(",deep_fry")}>Deep Fry</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod(",grill")}>Grill</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod(",pan_fry")}>Pan Fry</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod(",steam")}>Steam</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>
                 <Col>
                     <Dropdown>
                         <Dropdown.Toggle variant='dark'>
-                            Select Difficulty
+                            {difficultyToggle}
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleDifficulty("none")}>None</Dropdown.Item>

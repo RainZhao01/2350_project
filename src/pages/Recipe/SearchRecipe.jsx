@@ -14,7 +14,7 @@ export function SearchRecipes() {
     useEffect(() => {
         fetch(apiUrl, {
             headers: {
-                'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
+                // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
                 'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
             }
 

@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { PropTypes } from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {Row, Col} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 import './Search_Result.css';
 
@@ -13,6 +14,16 @@ export function SearchResult(props) {
     let tags = props.tags;
     let positiveRating = props.positiveRating;
     let negativeRating = props.negativeRating;
+
+    let dynamicData = props.dynamicData;
+
+    const navigate = useNavigate();
+    
+    function onMoreDetailsClick(){
+        console.log(dynamicData)
+        navigate( '/RecipeTemplate', { state: {data:dynamicData} })             //this sends to tempComp
+    }
+
 
     return (
         <Card className='m-4' style={{ width: '100%', height: "32rem" }}>
@@ -31,7 +42,7 @@ export function SearchResult(props) {
                             </ListGroup>
                         </Card.Text>
                         {/* Button will link to a different page containing more info on the recipe. It its current state the button does nothing */}
-                        <Button variant="dark">More Details</Button>
+                        <Button variant="dark" onClick={onMoreDetailsClick} >More Details</Button>
                     </Card.Body>
                 </Col>
             </Row>
@@ -46,4 +57,5 @@ SearchResult.propTypes = {
     tags: PropTypes.string.isRequired,
     positiveRating: PropTypes.string.isRequired,
     negativeRating: PropTypes.string.isRequired,
+    dynamicData: PropTypes.array.isRequired,
 };

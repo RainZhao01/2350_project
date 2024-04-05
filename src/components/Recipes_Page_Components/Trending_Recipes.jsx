@@ -28,6 +28,7 @@ export function TrendingRecipe(props) {
                             </ListGroup>
                         </Card.Text>
                         <Button variant="dark">More Details</Button>
+                        {/* ^^^^ an href REcip Template, CREATE A TEMPLATEDATA, all data is in recips.jsx */}
                     </Card.Body>
                 </Col>
             </Row>

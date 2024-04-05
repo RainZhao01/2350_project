@@ -63,7 +63,7 @@ export function SearchRecipes() {
                             <Row>
                                 <SearchResult name={data.name} image={data.thumbnail_url} description={data.description}
                                     positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
-                                    tags={tagsToString(data.tags)} />
+                                    tags={tagsToString(data.tags)} dynamicData={data}/>
                             </Row>
                         </React.Fragment>
                     ))}

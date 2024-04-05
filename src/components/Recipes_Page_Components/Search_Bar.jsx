@@ -11,9 +11,9 @@ export function SearchBar({ apiCall }) {
 
     const [difficulty, setDifficulty] = useState("");
     const [dietaryRestriction, setDietaryRestriction] = useState("");
-    const [dietaryRestrictionToggle, setDietaryRestrictionToggle] = useState("Select Dietary Restriction")
+    const [dietaryRestrictionToggle, setDietaryRestrictionToggle] = useState("Select Dietary Restriction");
     const [cuisine, setCuisine] = useState("");
-    const [cuisineToggle, setCuisineToggle] = useState("Select Cuisine")
+    const [cuisineToggle, setCuisineToggle] = useState("Select Cuisine");
     const [mealType, setMealType] = useState("");
     const [mealTypeToggle, setMealTypeToggle] = useState("Select Meal Type");
     const [cookingMethod, setCookingMethod] = useState("");
@@ -71,7 +71,6 @@ export function SearchBar({ apiCall }) {
             setCookingMethodToggle(Uppercase + eventKey.substring(2).replace("_"," "));
         }
     }
-
 
     const handleChange = (eventKey) => {
         setRecipeName(eventKey);
@@ -212,7 +211,6 @@ export function SearchBar({ apiCall }) {
         </Form>
     )
 }
-
 SearchBar.propTypes = {
     apiCall: PropTypes.func.isRequired,
 };

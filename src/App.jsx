@@ -23,14 +23,11 @@ import { Workout } from './pages/Workout/Workout.jsx'
 export function App() { 
   return (
     <>
-    
     <NavBar/>
       <Routes>
-      <Route path="/Workout_Details" element={<Workout_Details/>}/>
-
         <Route path="/" element={<Recipes />}/>
         <Route path="/Workout" element={<Workout />}/>
-
+        <Route path="/Workout_Details" element={<Workout_Details/>}/>
         <Route path="/NotFound" element={<NotFoundPage />} />
       </Routes>
       <FooterBar/>

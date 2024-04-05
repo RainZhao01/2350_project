@@ -26,10 +26,11 @@ export function WorkoutOfTheDay(props) {
             {/*The Workout name and food description will be added when API is added*/}
             <Card.Title>{name}</Card.Title>
             <Card.Text>
-              <ListGroup.Item>Type: {type} </ListGroup.Item>
-              <ListGroup.Item>Difficulty: {difficulty} </ListGroup.Item>
+              <ListGroup>
+                <ListGroup.Item>Type: {type} </ListGroup.Item>
+                <ListGroup.Item>Difficulty: {difficulty} </ListGroup.Item>
+              </ListGroup>
             </Card.Text>
-            {/*Button will link to a different page containing more info on the Workout. It its current state the button does nothing*/}
             <Link to='../Workout_Details'
               state={{
                 name: name,

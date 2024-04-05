@@ -36,9 +36,8 @@ export function TrendingWorkout(props) {
                                 <ListGroup.Item>Difficulty: {difficulty} </ListGroup.Item>
                             </ListGroup>
                         </Card.Text>
-                        {/*Button will link to a different page containing more info on the Workout. It its current state the button does nothing*/}
                         <Link to='../Workout_Details'
-                            state ={{
+                            state={{
                                 name: name,
                                 type: type,
                                 muscle: muscle,

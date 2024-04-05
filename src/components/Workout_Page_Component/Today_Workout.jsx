@@ -13,13 +13,14 @@ export function WorkoutOfTheDay(props) {
   let equipment = props.equipment;
   let difficulty = props.difficulty;
   let instructions = props.instructions;
-
+  let image = props.image;
+console.log(image)
   return (
     <Card className='m-2' style={{ width: '70rem' }}>
       <div className="row g-0">
         <div className="col-md-7">
           {/*The scr current links to no img which will be changed once API is added*/}
-          <Card.Img variant="top" src="" style={{ marginTop: '10px', marginBottom: '10px', borderRadius: 10 }} />
+          <Card.Img variant="top" src={image} alt="workout image" style={{ margintop: '10px',marginleft: '10px',marginBottom: '10px', height: '19.3rem', borderradius: '10'}} />
         </div>
         <div className="col-md-5">
           <Card.Body className='row g-0 '>
@@ -54,5 +55,7 @@ WorkoutOfTheDay.propTypes = {
   muscle: PropTypes.string.isRequired,
   equipment: PropTypes.string.isRequired,
   difficulty: PropTypes.string.isRequired,
-  instructions: PropTypes.string.isRequired
+  instructions: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
+
 };

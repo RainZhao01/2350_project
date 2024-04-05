@@ -15,13 +15,14 @@ export function TrendingWorkout(props) {
     let equipment = props.equipment;
     let difficulty = props.difficulty;
     let instructions = props.instructions;
+    let image = props.image;
 
     return (
         <Card className='m-4' style={{ width: '36rem' }}>
             <div className="row g-0">
                 <div className="col-md-6">
                     {/*The scr current links to no image which will need to be changed once API is added*/}
-                    <Card.Img variant="top" src="" style={{
+                    <Card.Img variant="top" src={image} alt= "workout image" style={{
                         marginTop: '10px', marginBottom: '10px', marginLeft: '10px',
                         borderRadius: 10
                     }} />
@@ -60,5 +61,7 @@ TrendingWorkout.propTypes = {
     muscle: PropTypes.string.isRequired,
     equipment: PropTypes.string.isRequired,
     difficulty: PropTypes.string.isRequired,
-    instructions: PropTypes.string.isRequired
+    instructions: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
+
 };

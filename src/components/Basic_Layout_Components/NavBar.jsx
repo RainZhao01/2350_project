@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+
 export function NavBar() {
     return (
         <>
@@ -16,6 +17,7 @@ export function NavBar() {
                         {/*The links do not go anywhere current */}
                         <Nav.Link href="/">Healthy Recipes</Nav.Link>
                         <Nav.Link href="Workout">Exercise Assistance</Nav.Link>
+                        <Nav.Link href="RecipeTemplate">RecipeTemplate</Nav.Link>
                     </Nav>
                 </Container>
                 <Container style={{justifyContent: 'end'}}>

@@ -2,21 +2,31 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { PropTypes } from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { useNavigate } from 'react-router-dom';
 
-export function TrendingRecipe(props) {
+import './Search_Result.css';
+
+export function SearchResult(props) {
     let name = props.name;
     let description = props.description;
     let image = props.image;
+    let tags = props.tags;
     let positiveRating = props.positiveRating;
     let negativeRating = props.negativeRating;
+    let dynamicData = props.dynamicData;
+
+    const navigate = useNavigate();
+    
+    function onMoreDetailsClick(){
+        console.log(dynamicData)
+        navigate( '/RecipeTemplate', { state: {data:dynamicData} })             //this sends to tempComp
+    }
+
     return (
-        <Card className='m-4' style={{ width: '36rem' }}>
+        <Card className='m-4' style={{ width: '100%' }}>
             <div className="row g-0">
                 <div className="col-md-6">
-                    <Card.Img variant="top" src={image} style={{
-                        marginTop: '10px', marginBottom: '10px', marginLeft: '10px',
-                        borderRadius: 10
-                    }} />
+                    <Card.Img variant="top" src={image} className="resultImage" />
                 </div>
                 <div className="col-md-6">
                     <Card.Body className='row g-0 '>
@@ -25,11 +35,12 @@ export function TrendingRecipe(props) {
                             <ListGroup>
                                 <ListGroup.Item>Description: {description} </ListGroup.Item>
                                 <ListGroup.Item>Rating Positive: {positiveRating} Negative: {negativeRating} </ListGroup.Item>
+                                <ListGroup.Item>Tags: {tags} </ListGroup.Item>
                             </ListGroup>
                         </Card.Text>
-                        {/*Button will link to a different page containing more info on the recipe. It its current state the button does nothing*/}
-                        <Button variant="dark">More Details</Button>
-                        {/* ^^^^ an href REcip Template, CREATE A TEMPLATEDATA, all data is in recips.jsx */}
+                        {/* Button will link to a different page containing more info on the recipe. It its current state the button does nothing */}
+                        <Button variant="dark" onClick={onMoreDetailsClick} >More Details</Button>
+                        
                     </Card.Body>
                 </div>
             </div>
@@ -37,10 +48,12 @@ export function TrendingRecipe(props) {
     )
 }
 
-TrendingRecipe.propTypes = {
+SearchResult.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
     positiveRating: PropTypes.string.isRequired,
     negativeRating: PropTypes.string.isRequired,
+    dynamicData: PropTypes.array.isRequired,
 };

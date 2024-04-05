@@ -27,7 +27,6 @@ export function TrendingRecipe(props) {
                                 <ListGroup.Item>&#x1F44D;: { positiveRating } &#128078;: { negativeRating} </ListGroup.Item>
                             </ListGroup>
                         </Card.Text>
-                        {/*Button will link to a different page containing more info on the recipe. It its current state the button does nothing*/}
                         <Button variant="dark">More Details</Button>
                     </Card.Body>
                 </Col>

@@ -15,19 +15,19 @@ export function SearchResult(props) {
     let negativeRating = props.negativeRating;
 
     return (
-        <Card className='m-4' style={{ width: '100%' }}>
+        <Card className='m-4' style={{ width: '100%', height: "32rem" }}>
             <Row className="g-0">
-                <Col className="md-6">
-                    <Card.Img variant="top" src={image} className="resultImage" />
+                <Col xs={4}>
+                    <Card.Img variant="top" src={image} className="resultImage" style={{height: '30rem',  width: "25rem"}}/>
                 </Col>
-                <Col className="md-6">
+                <Col xs={8}>
                     <Card.Body className='row g-0 '>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
                             <ListGroup>
-                                <ListGroup.Item>Description: {description} </ListGroup.Item>
-                                <ListGroup.Item>Rating Positive: {positiveRating} Negative: {negativeRating} </ListGroup.Item>
-                                <ListGroup.Item>Tags: {tags} </ListGroup.Item>
+                                <ListGroup.Item className='SRItem'>Description: {description} </ListGroup.Item>
+                                <ListGroup.Item className='SRItem'>Tags: {tags}</ListGroup.Item>
+                                <ListGroup.Item>&#x1F44D;: {positiveRating} &#128078;: {negativeRating} </ListGroup.Item>
                             </ListGroup>
                         </Card.Text>
                         {/* Button will link to a different page containing more info on the recipe. It its current state the button does nothing */}

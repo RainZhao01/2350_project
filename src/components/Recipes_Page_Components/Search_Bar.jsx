@@ -17,6 +17,7 @@ export function SearchBar({ apiCall }) {
     const [mealType, setMealType] = useState("");
     const [mealTypeToggle, setMealTypeToggle] = useState("Select Meal Type");
     const [cookingMethod, setCookingMethod] = useState("");
+    const [cookingMethodToggle, setCookingMethodToggle] = useState("Select Cooking Method");
     const [recipeName, setRecipeName] = useState("");
 
     const handleDifficulty = (eventKey) => {
@@ -55,13 +56,23 @@ export function SearchBar({ apiCall }) {
         }
         else{
             let Uppercase = eventKey.charAt(1).toUpperCase();
-            setCuisineToggle(Uppercase + eventKey.substring(2));
+            setCuisineToggle(Uppercase + eventKey.substring(2).replace("_"," "));
         }
     }
 
     const handleCookingMethod = (eventKey) => {
         setCookingMethod(eventKey);
+        if(eventKey == 'none'){
+            setCookingMethod("");
+            setCookingMethodToggle("Select Cooking Method")
+        }
+        else{
+            let Uppercase = eventKey.charAt(1).toUpperCase();
+            setCookingMethodToggle(Uppercase + eventKey.substring(2).replace("_"," "));
+        }
     }
+
+
     const handleChange = (eventKey) => {
         setRecipeName(eventKey);
     }
@@ -91,7 +102,6 @@ export function SearchBar({ apiCall }) {
                 </Col>
             </Row>
             <Row xs="auto">
-                {/*Need to make a Dropdown for the tags for all sections*/}
                 <Col>
                     <Dropdown>
                         <Dropdown.Toggle variant='dark'>
@@ -99,43 +109,43 @@ export function SearchBar({ apiCall }) {
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleCuisine("none")}>None</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",african")}>African</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",american")}>American</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",brazilian")}>Brazilian</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",british")}>British</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",caribbean")}>Caribbean</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",chinese")}>Chinese</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",cuban")}>Cuban</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",dominican")}>Dominican</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",ethiopian")}>Ethiopian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",filipino")}>Filipino</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",french")}>French</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",german")}>German</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",greek")}>Greek</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",haitian")}>Haitian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",hawaiian")}>Hawaiian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",indian")}>Indian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",indigenous")}>Indigenous</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",italian")}>Italian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",jamaican")}>Jamaican</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",japanese")}>Japanese</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",kenyan")}>Kenyan</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",korean")}>Korean</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",latin_american")}>Latin American</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",laotian")}>Laotian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",lebanese")}>Lebanese</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",mexican")}>Mexican</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",middle_eastern")}>Middle Eastern</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",dominican")}>Dominican</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",puerto_rican")}>Puerto Rican</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",greek")}>Greek</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",indian")}>Indian</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",thai")}>Thai</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",hawaiian")}>Hawaiian</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",ethiopian")}>Ethiopian</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",west_african")}>West African</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",peruvian")}>Peruvian</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",cuban")}>Cuban</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",brazilian")}>Brazilian</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",taiwanese")}>Taiwanese</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",haitian")}>Haitian</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",german")}>German</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",japanese")}>Japanese</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",korean")}>Korean</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",african")}>African</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",caribbean")}>Caribbean</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",filipino")}>Filipino</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",south_african")}>South African</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",jamaican")}>Jamaican</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",american")}>American</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",chinese")}>Chinese</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",french")}>French</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",latin_american")}>Latin American</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",vietnamese")}>Vietnamese</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",kenyan")}>Kenyan</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",swedish")}>Swedish</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",persian")}>Persian</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",lebanese")}>Lebanese</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",indigenous")}>Indigenous</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCuisine(",Laotian")}>laotian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",peruvian")}>Peruvian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",puerto_rican")}>Puerto Rican</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",south_african")}>South African</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",swedish")}>Swedish</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",taiwanese")}>Taiwanese</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",thai")}>Thai</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",vietnamese")}>Vietnamese</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleCuisine(",venezuelan")}>Venezuelan</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCuisine(",west_african")}>West African</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>
@@ -146,25 +156,29 @@ export function SearchBar({ apiCall }) {
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleDietaryRestriction("none")}>None</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDietaryRestriction(",dairy_free")}>Dairy Free</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDietaryRestriction(",vegan")}>Vegan</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDietaryRestriction(",pescatarian")}>Pescatarian</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",contains_alcohol")}>Contains Alcohol</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDietaryRestriction(",low_carb")}>Low Carb</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDietaryRestriction(",indulgent_sweets")}>Indulgent Sweets</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDietaryRestriction(",vegetarian")}>Vegetarian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDietaryRestriction(",dairy_free")}>Dairy Free</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",gluten_free")}>Gluten Free</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDietaryRestriction(",indulgent_sweets")}>Indulgent Sweets</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDietaryRestriction(",low_carb")}>Low Carb</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDietaryRestriction(",pescatarian")}>Pescatarian</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDietaryRestriction(",vegan")}>Vegan</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDietaryRestriction(",vegetarian")}>Vegetarian</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>
                 <Col>
                     <Dropdown>
                         <Dropdown.Toggle variant='dark'>
-                            Select Cooking Method
+                            {cookingMethodToggle}
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="Dropdown-item">
                             <Dropdown.Item onClick={() => handleCookingMethod("none")}>None</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleCookingMethod("something")}>something</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod("bake")}>Bake</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod("deep_fry")}>Deep Fry</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod("grill")}>Grill</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod("pan_fry")}>Pan Fry</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleCookingMethod("steam")}>Steam</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>

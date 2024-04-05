@@ -8,20 +8,20 @@ import { SearchResult } from '../../components/Recipes_Page_Components/Search_Re
 
 export function SearchRecipes() {
     //use apiUrl to get the recipe resuls.
-    const [apiUrl, setApiUrl] = useState('https://tasty.p.rapidapi.com/recipes/list?from=0&size=5&tags=meal,healthy');
+    const [apiUrl, setApiUrl] = useState('https://tasty.p.rapidapi.com/recipes/list?from=0&size=8&tags=meal,healthy');
     const [serachResults, setSearchResults] = useState([]);
 
     useEffect(() => {
         fetch(apiUrl, {
             headers: {
-                // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
+                'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
                 'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
             }
 
         })
             .then((response) => response.json())
             .then((data) => {
-                setSearchResults(data);
+                setSearchResults(data["results"]);
                 console.log(data);
             })
             .catch((error) => {
@@ -52,15 +52,23 @@ export function SearchRecipes() {
                 <h4>Search Results: </h4>
             </Row>
             <Row >
-                {serachResults["results"]?.map((data, index) => (
-                    <React.Fragment key={index}>
-                        <Row>
-                            <SearchResult name={data.name} image={data.thumbnail_url} description={data.description}
-                                positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
-                                tags={tagsToString(data.tags)} />
-                        </Row>
-                    </React.Fragment>
-                ))}
+                {serachResults.length == 0 &&(
+                    <h1>No Results Found</h1>
+                )}
+
+                {serachResults.length != 0 && (
+                    <>
+                    {serachResults?.map((data, index) => (
+                        <React.Fragment key={index}>
+                            <Row>
+                                <SearchResult name={data.name} image={data.thumbnail_url} description={data.description}
+                                    positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
+                                    tags={tagsToString(data.tags)} />
+                            </Row>
+                        </React.Fragment>
+                    ))}
+                    </>
+                )}
             </Row>
         </Container>
     )

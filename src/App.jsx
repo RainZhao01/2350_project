@@ -10,13 +10,15 @@ import { BrowserRouter } from 'react-router-dom';
 import { NavBar } from './components/Basic_Layout_Components/NavBar.jsx'
 import { FooterBar } from './components/Basic_Layout_Components/FooterBar.jsx'
 import { Routes, Route } from 'react-router-dom';
-import { Recipes } from './pages/Recipe/Recipes.jsx' 
+import { Recipes } from './pages/Recipe/Recipes.jsx'; 
+import { SearchRecipes } from './pages/Recipe/SearchRecipe.jsx';
 
 //add recipe template page
 
 
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
 import { Workout } from './pages/Workout/Workout.jsx'
+import { RecipeTemplate } from './pages/Recipe/RecipeTemplate.jsx';
 
 
 export function App() { 
@@ -26,7 +28,9 @@ export function App() {
       <Routes>
         <Route path="/" element={<Recipes />}/>
         <Route path="/Workout" element={<Workout />}/>
+        <Route path="/RecipeTemplate" element={<RecipeTemplate />} />
         <Route path="/NotFound" element={<NotFoundPage />} />
+        <Route path="/SearchRecipes" element={<SearchRecipes />} />
       </Routes>
       <FooterBar/>
     </>

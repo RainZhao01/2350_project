@@ -28,7 +28,7 @@ export function RecipeOfTheDay() {
     
     fetch(dailyRecipeUrl,{
       headers: {
-        // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
+        'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
         // 'X-RapidAPI-Key': '99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61',
         'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
       } 

@@ -1,3 +1,4 @@
+
 import { Container, Row, Col, DropdownButton, Dropdown, Form } from 'react-bootstrap';
 import { WorkoutOfTheDay } from '../../components/Workout_Page_Component/Today_Workout';
 import { TrendingWorkout } from '../../components/Workout_Page_Component/Trending_Workout';
@@ -130,22 +131,22 @@ export function Workout() {
     </>
   );
 }
-{/* <Row >
-                {serachResults.length == 0 &&(
-                    <h1>No Results Found</h1>
-                )}
 
-                {serachResults.length != 0 && (
-                    <>
-                    {serachResults?.map((data, index) => (
-                        <React.Fragment key={index}>
-                            <Row>
-                                <SearchResult name={data.name} image={data.thumbnail_url} description={data.description}
-                                    positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
-                                    tags={tagsToString(data.tags)} />
-                            </Row>
-                        </React.Fragment>
-                    ))}
-                    </>
-                )}
-            </Row> */}
+    <Container className='mt-4'>
+      <Row style={{ justifyContent: 'center' }}>
+        <h4>Workout of the day</h4>
+        <WorkoutOfTheDay />
+      </Row>
+      <Row>
+        <h5>Trending_Workouts</h5>
+        <Col><TrendingWorkout /></Col>
+        <Col><TrendingWorkout /></Col>
+        <div className="w-100"></div>
+        <Col><TrendingWorkout /></Col>
+        <Col><TrendingWorkout /></Col>
+      </Row>
+    </Container>
+
+  )
+}
+

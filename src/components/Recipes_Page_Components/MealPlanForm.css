@@ -1,0 +1,25 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.dropdown-toggle {
+    /* background-color: #343a40;  */
+    color: #fff;
+    border: none;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+.button{
+    width: min-content;
+}

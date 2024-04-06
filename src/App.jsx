@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+
 import './App.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,14 +11,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { NavBar } from './components/Basic_Layout_Components/NavBar.jsx'
 import { FooterBar } from './components/Basic_Layout_Components/FooterBar.jsx'
 import { Routes, Route } from 'react-router-dom';
-import { Recipes } from './pages/Recipe/Recipes.jsx'; 
+
+import { Recipes } from './pages/Recipe/Recipes.jsx' 
+import { Workout_Details } from './components/Workout_Page_Component/Workout_Details.jsx';
 import { SearchRecipes } from './pages/Recipe/SearchRecipe.jsx';
 
-<<<<<<< HEAD
-=======
 //add recipe template page
-
->>>>>>> e9d0f894eba2cc2068aecc5f07ac1429ef67be72
 
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
 import { Workout } from './pages/Workout/Workout.jsx'
@@ -32,6 +31,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<Recipes />}/>
         <Route path="/Workout" element={<Workout />}/>
+        <Route path="/Workout_Details" element={<Workout_Details/>}/>
         <Route path="/RecipeTemplate" element={<RecipeTemplate />} />
         <Route path="/NotFound" element={<NotFoundPage />} />
         <Route path="/SearchRecipes" element={<SearchRecipes />} />

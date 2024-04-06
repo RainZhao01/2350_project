@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button} from 'react-bootstrap';
+
 import { RecipeOfTheDay } from '../../components/Recipes_Page_Components/Today_Recipe';
 import { TrendingRecipe } from '../../components/Recipes_Page_Components/Trending_Recipes';
 import {useState, useEffect} from 'react'

@@ -1,5 +1,10 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+
+//This is only a layout for how the Trending recipes componet is going to look like as the Tasty API has not been added
+//Paramters need to be added when Api is added
+
+export function TrendingRecipe() {
 import { PropTypes } from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {Row, Col} from 'react-bootstrap';
@@ -24,6 +29,7 @@ export function TrendingRecipe(props) {
         navigate( '/RecipeTemplate', { state: {data:dynamicData} })             //this sends to tempComp
     }
 
+
     return (
         <Card className='m-0' id='prCard'>
             <Row className="g-0">
@@ -34,6 +40,7 @@ export function TrendingRecipe(props) {
                     <Card.Body className='row g-0 '>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
+                            <p>Food description </p>
                             <ListGroup>
                                 <ListGroup.Item id='prDescription'>{description} </ListGroup.Item>
                                 <ListGroup.Item>&#x1F44D;: { positiveRating } &#128078;: { negativeRating} </ListGroup.Item>

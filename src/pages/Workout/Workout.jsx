@@ -147,6 +147,3 @@ export function Workout() {
       </Row>
     </Container>
 
-  )
-}
-

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Row, Form, Button, Dropdown } from 'react-bootstrap';
+import './MealPlanForm.css';
 
 export function MealPlanForm({ onFormSubmit }) { 
     const [dietaryRestriction, setDietaryRestriction] = useState('');
@@ -25,8 +26,28 @@ export function MealPlanForm({ onFormSubmit }) {
 
     return (
         <Container className='mt-4'>
-            <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
+            <Row>
+
+            </Row>
                 <Row className="mb-3">
+                <div className="calorieRow" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <Form.Group controlId="calorieGoal" className="col" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <Form.Label>Input Your Desired Calorie Intake</Form.Label>
+                        <a href="https://www.healthline.com/nutrition/how-many-calories-per-day#calculator" 
+                            target="_blank" 
+                            alt="Link to calorie calculator" 
+                            style={{ textDecoration: 'none' }}>
+                            Dont know? Click here.
+                        </a>
+                        <Form.Control
+                            type="number"
+                            placeholder="Enter calorie goal"
+                            value={calorieGoal}
+                            onChange={handleCalorieChange}
+                            style={{ width: '200px' }}
+                        />
+                    </Form.Group>
                     <Dropdown>
                         <Dropdown.Toggle variant='dark'>
                             Select Dietary Restriction
@@ -39,22 +60,15 @@ export function MealPlanForm({ onFormSubmit }) {
                             <Dropdown.Item onClick={() => handleDietaryRestriction(",vegetarian")}>Vegetarian</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
-                </Row>
-                <Row className="mb-3">
-                    <Form.Group controlId="calorieGoal" className="mb-3">
-                        <Form.Label>Input your Calorie Goal</Form.Label>
-                        <Form.Control
-                            type="number"
-                            placeholder="Enter calorie goal"
-                            value={calorieGoal}
-                            onChange={handleCalorieChange}
-                        />
-                    </Form.Group>
-                </Row>
-                <Button variant="primary" type="submit">
+                </div>
+            </Row>
+            <Row className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>
+                <Button variant="primary" type="submit" style={{ width: '200px' }}>
                     Create Meal Plan!
                 </Button>
-            </Form>
-        </Container>
+            </Row>
+        </Form>
+    </Container>
+    
     );
 }

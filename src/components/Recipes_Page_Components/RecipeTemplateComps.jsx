@@ -13,8 +13,12 @@ export function RecipeTemplatePage(props) {
     let negativeRating = props.negativeRating;
     let sections = props.sections;
     let instructions = props.instructions;
+    let nutrition = props.nutrition;
 
     const ingredientsList = [];
+
+    // const NutritionalInfo = ({ nutrition }) => {
+    //     const { calories, carbohydrates, fat, fiber, protein, sugar } = nutrition;
 
     sections.forEach(section => {
         section.components.forEach(component => {
@@ -38,6 +42,15 @@ export function RecipeTemplatePage(props) {
             <Card.Text>Description: {description}</Card.Text>
             <Card.Text>Time: {hours} hours {minutes} minutes</Card.Text>
             <Card.Text>Rating Positive: {positiveRating} Negative: {negativeRating}</Card.Text>
+            <Card.Title>Nutritional Info:</Card.Title>
+            <ListGroup>
+                    <ListGroup.Item>Calories: {nutrition.calories}</ListGroup.Item>
+                    <ListGroup.Item>Carbohydrates: {nutrition.carbohydrates}g</ListGroup.Item>
+                    <ListGroup.Item>Fat: {nutrition.fat}g</ListGroup.Item>
+                    <ListGroup.Item>Fiber: {nutrition.fiber}g</ListGroup.Item>
+                    <ListGroup.Item>Protein: {nutrition.protein}g</ListGroup.Item>
+                    <ListGroup.Item>Sugar: {nutrition.sugar}g</ListGroup.Item>
+                </ListGroup>
             <Card.Title>Ingredients:</Card.Title>
             <ListGroup>
                 {ingredientsList.map((ingredient, index) => (
@@ -76,5 +89,13 @@ RecipeTemplatePage.propTypes = {
     ingredients: PropTypes.array.isRequired, // could be array or string
     instructions: PropTypes.array.isRequired,
     sections: PropTypes.array.isRequired,
-    video: PropTypes.string.isRequired
+    video: PropTypes.string.isRequired,
+    nutrition: PropTypes.shape({
+        calories: PropTypes.number.isRequired,
+        carbohydrates: PropTypes.number.isRequired,
+        fat: PropTypes.number.isRequired,
+        fiber: PropTypes.number.isRequired,
+        protein: PropTypes.number.isRequired,
+        sugar: PropTypes.number.isRequired,
+    }).isRequired,
 };

@@ -19,7 +19,7 @@ export function RecipeTemplate() {
           description={data.description} hours={data.hours} 
           minutes={data.minutes} sections={data.sections} instructions={data.instructions}
           positiveRating={data.user_ratings.count_positive} negativeRating={data.user_ratings.count_negative}
-          video={data.original_video_url}
+          video={data.original_video_url}nutrition={data.nutrition}
           >
           </RecipeTemplatePage>
       </Row>

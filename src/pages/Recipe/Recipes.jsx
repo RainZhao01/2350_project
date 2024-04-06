@@ -1,4 +1,3 @@
-
 import { Container, Row, Col, Button} from 'react-bootstrap';
 import { RecipeOfTheDay } from '../../components/Recipes_Page_Components/Today_Recipe';
 import { TrendingRecipe } from '../../components/Recipes_Page_Components/Trending_Recipes';
@@ -7,10 +6,8 @@ import React from 'react';
 import './Recipes.css';
 
 export function Recipes() {
-
-  const [recipes, setRecipes] = useState([]);
-
   
+  const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     const dailyRecipeUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=4&tags=meal,healthy';
@@ -48,7 +45,7 @@ export function Recipes() {
           </Button>
         </Col>
         <Col>
-          <Button className='d-flex align-items-center justify-content-center recipe-button' variant='dark' href="#">
+          <Button className='d-flex align-items-center justify-content-center recipe-button' variant='dark' href="/MealPlan">
             Create a Meal Plan
           </Button>
         </Col>

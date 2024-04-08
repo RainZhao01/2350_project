@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+
 import './App.css';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +11,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { NavBar } from './components/Basic_Layout_Components/NavBar.jsx'
 import { FooterBar } from './components/Basic_Layout_Components/FooterBar.jsx'
 import { Routes, Route } from 'react-router-dom';
-import { Recipes } from './pages/Recipe/Recipes.jsx'; 
+
+import { Recipes } from './pages/Recipe/Recipes.jsx' 
+import { Workout_Details } from './components/Workout_Page_Component/Workout_Details.jsx';
 import { SearchRecipes } from './pages/Recipe/SearchRecipe.jsx';
 
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
@@ -26,6 +29,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Recipes />}/>
         <Route path="/Workout" element={<Workout />}/>
+        <Route path="/Workout_Details" element={<Workout_Details/>}/>
         <Route path="/RecipeTemplate" element={<RecipeTemplate />} />
         <Route path="/NotFound" element={<NotFoundPage />} />
         <Route path="/SearchRecipes" element={<SearchRecipes />} />

@@ -14,7 +14,8 @@ export function MealPlanPage(){
     const [dinnerRecipes, setDinnerRecipes] = useState([]);
     const navigate = useNavigate();
 
-    const johnsNewApiKey = '1074bbfaddmsh903770c3e2bcd7ep15f945jsn2ee9e13a2410';
+    const johnsNewApiKey = '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f';
+
 
     const handleFormSubmit = async (formData) => {
         console.log('Form received in MealPlanPage:', formData);

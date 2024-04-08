@@ -1,6 +1,7 @@
 //Ryan's Api key: 486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f
 //johns key : 99c5b37348mshcd1a26a64153451p1b2fc0jsne5ca216d0e61
 
+
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -70,7 +71,6 @@ export function RecipeOfTheDay() {
                 <ListGroup.Item>&#x1F44D;: { positiveRating } &#128078;: { negativeRating} </ListGroup.Item>
               </ListGroup>
             </Card.Text>
-            {/*Button will link to a different page containing more info on the recipe. It its current state the button does nothing*/}
             <Button variant="dark" onClick={onMoreDetailsClick} >More Details</Button>
           </Card.Body>
         </Col>

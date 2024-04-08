@@ -7,6 +7,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import {useState, useEffect} from 'react';
 import {Row, Col} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+
 // import { RecipeTemplatePage } from '../../components/Recipes_Page_Components/RecipeTemplateComps';
 
 import './Today_Recipe.css';
@@ -55,10 +56,10 @@ export function RecipeOfTheDay() {
   }
 
   return (
-    <Card className='m-2' id='rotdCard'>
+    <Card className='m-2' id='rotdCard' data-testid="recipeOfTheDay">
       <Row className="g-0">
         <Col className="md-4">
-          <Card.Img variant="top" id='rotdImage' src={image}/>
+          <Card.Img variant="top" id='rotdImage' src={image} />
         </Col>
         <Col className="md-8">
           <Card.Body className='row g-0, my-auto'>
@@ -75,5 +76,5 @@ export function RecipeOfTheDay() {
         </Col>
       </Row>
     </Card>
-  )
+  );
 }

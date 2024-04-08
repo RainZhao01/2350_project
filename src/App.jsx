@@ -13,19 +13,13 @@ import { Routes, Route } from 'react-router-dom';
 import { Recipes } from './pages/Recipe/Recipes.jsx'; 
 import { SearchRecipes } from './pages/Recipe/SearchRecipe.jsx';
 
-<<<<<<< HEAD
-=======
-//add recipe template page
-
->>>>>>> e9d0f894eba2cc2068aecc5f07ac1429ef67be72
-
 import { NotFoundPage } from './pages/NotFoundPage.jsx' 
 import { Workout } from './pages/Workout/Workout.jsx'
 import { RecipeTemplate } from './pages/Recipe/RecipeTemplate.jsx';
 import { MealPlanPage } from './pages/Recipe/MealPlan.jsx';
 
 
-export function App() { 
+export default function App() { 
   return (
     <>
     <NavBar/>

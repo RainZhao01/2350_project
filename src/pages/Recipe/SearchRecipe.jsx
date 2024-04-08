@@ -14,7 +14,7 @@ export function SearchRecipes() {
     useEffect(() => {
         fetch(apiUrl, {
             headers: {
-                'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
+                // 'X-RapidAPI-Key': '486012e96fmsh58cbc3385b05d74p190492jsn361fa1f77c9f',
                 'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
             }
 
@@ -43,17 +43,16 @@ export function SearchRecipes() {
     }
 
     return (
-
         <Container className='mt-4'>
             <Row>
                 <SearchBar apiCall={apiCall} />
             </Row>
             <Row style={{ justifyContent: 'center', marginTop: '20px' }}>
-                <h4>Search Results: </h4>
+                <h4 data-testid="">Search Results: </h4>
             </Row>
             <Row >
                 {serachResults.length == 0 &&(
-                    <h1>No Results Found</h1>
+                    <h1 >No Results Found</h1>
                 )}
 
                 {serachResults.length != 0 && (

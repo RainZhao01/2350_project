@@ -26,3 +26,18 @@ Our project is a software application that provides users with a way to balance 
 4. Start the Project using `npm run dev`
    
 ---
+
+### Tech Stack
+
+**Client**:
+
+- React
+- Vite
+- Vitest
+
+**API**:
+
+- Tasty 
+- Exercise
+
+---

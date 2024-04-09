@@ -22,13 +22,19 @@ Our project is a software application that provides users with a way to balance 
 ### Milestone #1 AI Declarations
 
 [Nam's AI Declaration Milestone 1](AI_Declaration/M2_AI_Declatration_Nam_Le_100373942.pdf)
+[Rain's AI Declaration Milestone 1]()
+[John's AI Declaration Milestone 1]()
+[Ryan's AI Declaration Milestone 1]()
 
 ---
 
 ### Milestone #2 AI Declarations
 
 
-[Nam's AI Declaration Milestone 2](AI_Declaration/M1_AI_Declatration_Nam_Le_100373942.pdf)
+[Nam's AI Declaration Milestone 2]()
+[Rain's AI Declaration Milestone 2]()
+[John's AI Declaration Milestone 2]()
+[Ryan's AI Declaration Milestone 2]()
 
 ---
 

@@ -25,8 +25,8 @@ Our project is a software application that provides users with a way to balance 
 
 ### Milestone #2 AI Declarations
 
-[Nam's AI Declaration Milestone 1](AI_Declaration/M2_AI_Declatration_Nam_Le_100373942)
-[Nam's AI Declaration Milestone 2](AI_Declaration/M1_AI_Declatration_Nam_Le_100373942)
+[Nam's AI Declaration Milestone 1](AI_Declaration/M2_AI_Declatration_Nam_Le_100373942.pdf)
+[Nam's AI Declaration Milestone 2](AI_Declaration/M1_AI_Declatration_Nam_Le_100373942.pdf)
 
 ---
 

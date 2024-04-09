@@ -13,9 +13,6 @@ Our project is a software application that provides users with a way to balance 
 
 ### Documents
 
-- Here is the Milestone #1 [Report](./docs/Documents/GoodGame_Milestone1_Report.pdf) of the project
-- Here is the Milestone #2 [Report](./docs/Documents/GoodGame_Milestone2_Report.pdf) of the project
-- Here is the [Timeline](./docs/Documents/GoodGame_Project_Timeline.pdf) of the project
-- Here is the [WBS](./docs/Documents/GoodGame_Project_WBS.pdf) of the project
+
 - Here is the [First Video Presentation](https://drive.google.com/file/d/1-6az5EgZI_E2YZrqIpppKqHQUYYn_22w/view) of the project
 - Here is the [Demo Video](https://docs.google.com/file/d/1RawIesZ-vh9bvU_NsfwlZaRu9pcRmPKl/preview) of the project

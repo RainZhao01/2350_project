@@ -14,16 +14,14 @@ Our project is a software application that provides users with a way to balance 
 ### Documents
 
 - Here is the Milestone #1 [Report](./PDF's-and-AI/group_6_project_report.pdf) of the project
-- Here is the Milestone #2 [Report](./PDF's-and-AI/M2_Report .pdf) of the project
+- Here is the Milestone #2 [Report](./PDF's-and-AI/M2_Report.pdf) of the project
 - Here is the [First Video Presentation](https://drive.google.com/file/d/1-6az5EgZI_E2YZrqIpppKqHQUYYn_22w/view) of the project
 - Here is the [Demo Video](https://docs.google.com/file/d/1RawIesZ-vh9bvU_NsfwlZaRu9pcRmPKl/preview) of the project
--  Here is the [WBS]() of the project
 
 ---
 
 ### Milestone #1 AI Declarations
 
-- [Nam's AI Declaration Milestone 1](./PDF's-and-AI/AI_Declaration/M2_AI_Declatration_Nam_Le_100373942.pdf)
 - [Rain's AI Declaration Milestone 1](./PDF's-and-AI/P1_AI_Declaration_Rain_Zhao_100366955.pdf)
 - [Ryan's AI Declaration Milestone 1](./PDF's-and-AI/P1_AI_Declaration_Ryan_Yan_100390550.pdf)
 

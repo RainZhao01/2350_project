@@ -30,10 +30,10 @@ Our project is a software application that provides users with a way to balance 
 ### Milestone #2 AI Declarations
 
 
-- [Nam's AI Declaration Milestone 2](PDF's and AI/M2_AI_Declatration_Nam_Le_100373942.pdf)
-- [Rain's AI Declaration Milestone 2](PDF's and AI/P2_AI_Declaration_Rain_Zhao_100366955.pdf)
-- [John's AI Declaration Milestone 2](PDF's and AI/P2_AI_Declaration_John_Baltazar_100398208.pdf)
-- [Ryan's AI Declaration Milestone 2](PDF's and AI/P2_AI_Declaration_Ryan_Yan_100390550.pdf)
+- [Nam's AI Declaration Milestone 2](/PDF's and AI/M2_AI_Declatration_Nam_Le_100373942.pdf)
+- [Rain's AI Declaration Milestone 2](/PDF's and AI/P2_AI_Declaration_Rain_Zhao_100366955.pdf)
+- [John's AI Declaration Milestone 2](/PDF's and AI/P2_AI_Declaration_John_Baltazar_100398208.pdf)
+- [Ryan's AI Declaration Milestone 2](/PDF's and AI/P2_AI_Declaration_Ryan_Yan_100390550.pdf)
 
 ---
 

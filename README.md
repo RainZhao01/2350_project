@@ -13,9 +13,11 @@ Our project is a software application that provides users with a way to balance 
 
 ### Documents
 
-
+- Here is the Milestone #1 [Report]() of the project
+- Here is the Milestone #2 [Report]() of the project
 - Here is the [First Video Presentation](https://drive.google.com/file/d/1-6az5EgZI_E2YZrqIpppKqHQUYYn_22w/view) of the project
 - Here is the [Demo Video](https://docs.google.com/file/d/1RawIesZ-vh9bvU_NsfwlZaRu9pcRmPKl/preview) of the project
+-  Here is the [WBS]() of the project
 
 ---
 

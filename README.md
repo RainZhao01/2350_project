@@ -21,20 +21,19 @@ Our project is a software application that provides users with a way to balance 
 
 ### Milestone #1 AI Declarations
 
--[Nam's AI Declaration Milestone 1](AI_Declaration/M2_AI_Declatration_Nam_Le_100373942.pdf)
--[Rain's AI Declaration Milestone 1](P1_AI_Declaration_Rain_Zhao_100366955.pdf)
--[John's AI Declaration Milestone 1]()
--[Ryan's AI Declaration Milestone 1](P1_AI_Declaration_Ryan_Yan_100390550.pdf)
+-[Nam's AI Declaration Milestone 1](./AI_Declaration/M2_AI_Declatration_Nam_Le_100373942.pdf)
+-[Rain's AI Declaration Milestone 1](./P1_AI_Declaration_Rain_Zhao_100366955.pdf)
+-[Ryan's AI Declaration Milestone 1](./P1_AI_Declaration_Ryan_Yan_100390550.pdf)
 
 ---
 
 ### Milestone #2 AI Declarations
 
 
--[Nam's AI Declaration Milestone 2](M2_AI_Declatration_Nam_Le_100373942.pdf)
--[Rain's AI Declaration Milestone 2](P2_AI_Declaration_Rain_Zhao_100366955.pdf)
--[John's AI Declaration Milestone 2](P2_AI_Declaration_John_Baltazar_100398208.pdf)
--[Ryan's AI Declaration Milestone 2](P2_AI_Declaration_Ryan_Yan_100390550.pdf)
+-[Nam's AI Declaration Milestone 2](./M2_AI_Declatration_Nam_Le_100373942.pdf)
+-[Rain's AI Declaration Milestone 2](./P2_AI_Declaration_Rain_Zhao_100366955.pdf)
+-[John's AI Declaration Milestone 2](./P2_AI_Declaration_John_Baltazar_100398208.pdf)
+-[Ryan's AI Declaration Milestone 2](./P2_AI_Declaration_Ryan_Yan_100390550.pdf)
 
 ---
 

@@ -18,6 +18,16 @@ Our project is a software application that provides users with a way to balance 
 - Here is the [Demo Video](https://docs.google.com/file/d/1RawIesZ-vh9bvU_NsfwlZaRu9pcRmPKl/preview) of the project
 
 ---
+
+### Milestone #1 AI Declarations
+
+---
+
+### Milestone #2 AI Declarations
+
+
+---
+
 ### Getting Started
 
 1. Install the Project using .zip or `git clone`
@@ -32,6 +42,7 @@ Our project is a software application that provides users with a way to balance 
 **Client**:
 
 - React
+- Bootstrap
 - Vite
 - Vitest
 

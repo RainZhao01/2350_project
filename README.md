@@ -16,3 +16,13 @@ Our project is a software application that provides users with a way to balance 
 
 - Here is the [First Video Presentation](https://drive.google.com/file/d/1-6az5EgZI_E2YZrqIpppKqHQUYYn_22w/view) of the project
 - Here is the [Demo Video](https://docs.google.com/file/d/1RawIesZ-vh9bvU_NsfwlZaRu9pcRmPKl/preview) of the project
+
+---
+### Getting Started
+
+1. Install the Project using .zip or `git clone`
+2. Navigate to the root folder
+3. Download the project module using `npm install`
+4. Start the Project using `npm run dev`
+   
+---

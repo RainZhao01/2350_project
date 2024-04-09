@@ -20,7 +20,7 @@ jobs:
           node-version: '20.x'
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        uses: npm install
 
       - name: Build project
         run: npm run build
@@ -35,7 +35,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/Staging'
 
     steps:
       - name: Download artifact
